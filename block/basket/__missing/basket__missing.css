@@ -1,0 +1,10 @@
+.basket__missing {
+    margin-top: 37px;
+}
+
+@media screen and (max-width:757px) {
+    .basket__missing {
+        /* margin-top: 47px; */
+        margin: 47px 16px 0;
+    }
+}

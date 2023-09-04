@@ -1,0 +1,21 @@
+.order__text-green {
+    color: #0CB477;
+    border-bottom: 1px dashed;
+    max-width: max-content;
+    position: relative;
+}
+
+.order__text-green:hover::after {
+    content: "Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    color: #000000;
+    display: block;
+    width: 256px;
+    padding: 10px 16px 14px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }

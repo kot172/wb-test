@@ -1,0 +1,9 @@
+.delivery__text-date {
+    height: 56px;
+}
+
+@media screen and (max-width:757px) {
+    .delivery__text-date{
+        height: auto;
+    }
+}

@@ -1,0 +1,21 @@
+.basket__card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-height: 108px;
+    padding-top: 8px;
+}
+
+@media screen and (max-width:1024px) {
+    .basket__card {
+        max-width: 640px;
+    }
+}
+
+@media screen and (max-width:757px) {
+    .basket__card {
+        gap: 24px;
+        /* margin: 9px 16px 0; */
+        margin-top: 9px;
+    }
+}

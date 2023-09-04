@@ -1,0 +1,13 @@
+.price__new-currency{
+    width: 35px;
+    font-size: 16px;
+    line-height: 24px;
+    align-self: end;
+}
+
+@media screen and (max-width: 757px) {
+    .price__new-currency{
+        margin-left: 5px;
+        margin-bottom: 3px;
+    }
+}

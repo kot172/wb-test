@@ -1,0 +1,19 @@
+.card__params-img{
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@media screen and (min-width: 758px) {
+    .card__params-img{
+        display: none;
+    }
+}

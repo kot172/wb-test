@@ -1,0 +1,9 @@
+.popup__close{
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: inherit;
+    background-image: url(../../../images/popup__close.svg);
+    margin-right: 17px;
+    cursor: pointer;
+}

@@ -1,0 +1,6 @@
+.card__info {
+    display: flex;
+    gap: 12px;
+    margin-top: 3px;
+    position: relative;
+}

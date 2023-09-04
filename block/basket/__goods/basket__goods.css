@@ -1,0 +1,10 @@
+.basket__goods{
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+    .basket__goods{
+        margin-top: 15px;
+        margin-left: 16px;
+    }
+}

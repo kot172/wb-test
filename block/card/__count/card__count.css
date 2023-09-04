@@ -1,0 +1,15 @@
+.card__count {
+    display: flex;
+    width: 100px;
+    height: 44px;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 757px) {
+    .card__count{
+        width: 80px;
+        height: 32px;
+    }
+}

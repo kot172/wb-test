@@ -1,0 +1,14 @@
+.basket__header {
+    border-bottom: 1px solid #0000001A;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+}
+
+@media screen and (max-width: 1024px) {
+    .basket__header{
+        padding-bottom: 16px;
+        margin-top: 24px;
+    }
+}

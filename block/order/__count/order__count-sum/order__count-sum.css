@@ -1,0 +1,14 @@
+.order__count-sum {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+}
+
+@media screen and (max-width: 757px) {
+    .order__count-sum{
+       font-size: 20px;
+       line-height: 28px;
+    }
+}

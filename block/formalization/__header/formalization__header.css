@@ -1,0 +1,15 @@
+.formalization__header {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 16px;
+    margin-bottom: 17px;
+}
+
+@media screen and (max-width:757px) {
+    .formalization__header {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 9px;
+    }
+}

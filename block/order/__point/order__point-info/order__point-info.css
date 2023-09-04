@@ -1,0 +1,11 @@
+.order__point-info{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+@media screen and (max-width: 757px) {
+    .order__point-info{
+      display: none;
+    }
+}

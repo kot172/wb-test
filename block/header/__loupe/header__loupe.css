@@ -1,0 +1,12 @@
+.header__loupe{
+    display: none;
+    }
+    
+    @media screen and (max-width: 757px) {
+        .header__loupe{
+            background-image: url(../../../images/loupe.png);
+            display: block;
+            width: 28px;
+            height: 28px;
+        }
+    }

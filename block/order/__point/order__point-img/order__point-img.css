@@ -1,0 +1,9 @@
+.order__point-img{
+    margin-left: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+    .order__point-img{
+        margin-right: 8px;
+    }
+}

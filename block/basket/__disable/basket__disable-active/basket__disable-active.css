@@ -1,0 +1,4 @@
+.basket__disable-active {
+    transform: rotate(180deg);
+    transition: .2s ease-in-out;
+}

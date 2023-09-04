@@ -1,0 +1,23 @@
+.order__container {
+    margin: 13px 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* max-width: 381px; */
+}
+
+@media screen and (max-width: 1024px) {
+    .order__container{
+       max-width: 84%;
+       margin: 13px 23px 0;
+       gap: 24px;
+    }
+}
+
+@media screen and (max-width: 757px) {
+    .order__container{
+        max-width: 90%;
+        margin: 13px 16px 0;
+        gap: 18px;
+    }
+}

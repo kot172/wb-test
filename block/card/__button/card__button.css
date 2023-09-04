@@ -1,0 +1,8 @@
+.card__button {
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}

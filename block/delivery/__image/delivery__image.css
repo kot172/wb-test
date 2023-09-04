@@ -1,0 +1,11 @@
+.delivery__image {
+    width: 40px;
+    height: 56px;
+}
+
+@media screen and (max-width: 757px) {
+    .delivery__image{
+        margin-top: 8px;
+    margin-bottom: 8px;
+    }
+}

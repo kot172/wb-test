@@ -1,0 +1,14 @@
+.card__text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    margin-left: 4px;
+    max-width: 275px;
+}
+
+@media screen and (max-width:757px) {
+    .card__text{
+        max-width: 100%;
+    }
+}

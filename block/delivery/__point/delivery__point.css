@@ -1,0 +1,5 @@
+.delivery__point {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}

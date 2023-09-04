@@ -1,0 +1,13 @@
+.header__logo {
+    width: 106px;
+    height: 56px;
+    background-image: url(../../../images/logo_WB.svg);
+}
+
+
+@media screen and (max-width: 757px) {
+    .header__logo{
+        background-image: url(../../../images/logo__wb-s.png);
+        width: 206px;
+    }
+}

@@ -1,0 +1,13 @@
+.card {
+    display: flex;
+    max-width: 891px;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 757px) {
+    .card{
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 0;
+    }
+}

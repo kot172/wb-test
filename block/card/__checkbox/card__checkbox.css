@@ -1,0 +1,13 @@
+.card__checkbox {
+    margin-top: 37px;
+}
+
+@media screen and (max-width: 757px) {
+    .card__checkbox {
+        position: absolute;
+        top: -32px;
+        left: 4px;
+        width: 22px;
+        height: 22px;
+    }
+}

@@ -1,0 +1,13 @@
+.delivery__caption {
+    display: flex;
+    gap: 9px;
+    margin-top: 23px;
+}
+
+@media screen and (max-width: 757px) {
+    .delivery__caption {
+        margin-top: 18px;
+        margin-left: 9px;
+        max-width: 90%;
+    }
+}

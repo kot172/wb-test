@@ -1,0 +1,18 @@
+.card__title {
+    list-style-type: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width:757px) {
+    .card__title {
+        font-size: 14px;
+        line-height: 20px;
+        max-height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

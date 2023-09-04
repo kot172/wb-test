@@ -1,0 +1,21 @@
+.formalization {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 40px auto 10px;
+}
+
+@media screen and (max-width:1024px) {
+    .formalization {
+        margin: 38px 15px 10px;
+        gap: 14px;
+    }
+}
+
+
+@media screen and (max-width:757px) {
+    .formalization {
+        margin: 35px auto 0;
+        gap: 11px;
+    }
+}

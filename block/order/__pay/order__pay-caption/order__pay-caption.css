@@ -1,0 +1,8 @@
+.order__pay-caption{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    background-color: #F0ECF4;
+    height: 62px;
+    border-radius: 8px;
+}

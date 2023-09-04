@@ -1,0 +1,9 @@
+.header__user-basket {
+    margin-right: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    position: relative;
+}

@@ -1,0 +1,17 @@
+.basket__card-gray {
+    border: 1px solid red;
+}
+
+@media screen and (max-width: 1024px) {
+    .basket__card-gray {
+        margin-left: 15px;
+        margin-top: 3px;
+    }
+}
+
+@media screen and (max-width: 757px) {
+    .basket__card-gray {
+        margin-left: 0px;
+        margin-top: 9px;
+    }
+}

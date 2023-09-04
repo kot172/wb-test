@@ -1,0 +1,13 @@
+.popup__block{
+    width: 456px;
+    display: flex;
+    gap: 4px;
+    margin-left: 4px;
+}
+
+@media screen and (max-width: 757px) {
+    .popup__block{
+        width: 80%;
+
+    }
+}

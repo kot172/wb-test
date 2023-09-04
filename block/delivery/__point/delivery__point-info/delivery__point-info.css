@@ -1,0 +1,12 @@
+.delivery__point-info {
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    height: 44px;
+}
+
+@media screen and (max-width:757px) {
+    .delivery__point-info {
+        height: auto;
+    }
+}

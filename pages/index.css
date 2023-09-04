@@ -1,0 +1,547 @@
+@import url(../vendor/fonts.css);
+
+@import url(../block/body/body.css);
+
+@import url(../block/page/page.css);
+
+@import url(../block/header/header.css);
+@import url(../block/header/__container/header__container.css);
+@import url(../block/header/__logo/header__logo.css);
+@import url(../block/header/__menu/header__menu.css);
+@import url(../block/header/__menu/header__menu-burger/header__menu-burger.css);
+@import url(../block/header/__menu/header__menu-img/header__menu-img.css);
+@import url(../block/header/__search/header__search.css);
+@import url(../block/header/__input/header__input.css);
+@import url(../block/header/__search/header__search-container/header__search-container.css);
+@import url(../block/header/__user/header__user.css);
+@import url(../block/header/__user/header__user-icon/header__user-icon.css);
+@import url(../block/header/__user/header__user-text/header__user-text.css);
+@import url(../block/header/__user/header__user-profile/header__user-profile.css);
+@import url(../block/header/__user/header__user-basket/header__user-basket.css);
+@import url(../block/header/__user/header__user-icon_count/header__user-icon_count.css);
+@import url(../block/header/__loupe/header__loupe.css);
+
+@import url(../block/main/main.css);
+
+@import url(../block/basket/basket.css);
+@import url(../block/basket/__card/basket__card.css);
+@import url(../block/basket/__card/basket__card-gray/basket__card-gray.css);
+@import url(../block/basket/__disable/basket__disable.css);
+@import url(../block/basket/__count/basket__count.css);
+@import url(../block/basket/__disable/basket__disable-active/basket__disable-active.css);
+@import url(../block/basket/__header/basket__header.css);
+@import url(../block/basket/__header/basket__header-missing/basket__header-missing.css);
+@import url(../block/basket/__goods/basket__goods.css);
+@import url(../block/basket/__allinput/basket__allinput.css);
+@import url(../block/basket/__none/basket__none.css);
+@import url(../block/basket/__input/basket__input-label/basket__input-label.css);
+@import url(../block/basket/__missing/basket__missing.css);
+@import url(../block/basket/__title/basket__title.css);
+@import url(../block/basket/__input/basket__input.css);
+
+@import url(../block/card/card.css);
+@import url(../block/card/__info/card__info.css);
+@import url(../block/card/__avatar/card__avatar.css);
+@import url(../block/card/__avatar/card__avatar-container/card__avatar-container.css);
+@import url(../block/card/__avatar/card__avatar-missing/card__avatar-missing.css);
+@import url(../block/card/__checkbox/card__checkbox.css);
+@import url(../block/card/__quantity/card__quantity.css);
+@import url(../block/card/__author/card__author.css);
+@import url(../block/card/__left/card__left.css);
+@import url(../block/card/__calculation/card__calculation.css);
+@import url(../block/card/__count/card__count.css);
+@import url(../block/card/__count/card__count-number/card__count-number.css);
+@import url(../block/card/__element/card__element.css);
+@import url(../block/card/__text/card__text.css);
+@import url(../block/card/__text/card__text-missing/card__text-missing.css);
+@import url(../block/card/__button/card__button.css);
+@import url(../block/card/__hang/card__hang.css);
+@import url(../block/card/__hang/card__hang-icon/card__hang-icon.css);
+@import url(../block/card/__hang/card__hang-gray/card__hang-gray.css);
+@import url(../block/card/__title/card__title.css);
+@import url(../block/card/__title/card__title-gray/card__title-gray.css);
+@import url(../block/card/__params/card__params.css);
+@import url(../block/card/__params/card__params-img/card__params-img.css);
+@import url(../block/card/__params/card__params-gray/card__params-gray.css);
+
+@import url(../block/price/price.css);
+@import url(../block/price/__new/price__new.css);
+@import url(../block/price/__old/price__old.css);
+@import url(../block/price/__new/price__new-currency/price__new-currency.css);
+
+@import url(../block/delivery/__header/delivery__header.css);
+@import url(../block/delivery/__point/delivery__point.css);
+@import url(../block/delivery/__point/delivery__point-info/delivery__point-info.css);
+@import url(../block/delivery/__container/delivery__container.css);
+@import url(../block/delivery/__text/delivery__text-l/delivery__text-l.css);
+@import url(../block/delivery/__text/delivery__text-m/delivery__text-m.css);
+@import url(../block/delivery/__text/delivery__text-s/delivery__text-s.css);
+@import url(../block/delivery/__text/delivery__text-date/delivery__text-date.css);
+@import url(../block/delivery/__image/delivery__image.css);
+@import url(../block/delivery/__caption/delivery__caption.css);
+
+@import url(../block/order/order.css);
+@import url(../block/order/__container/order__container.css);
+@import url(../block/order/__total/order__total.css);
+@import url(../block/order/__edit/order__edit.css);
+@import url(../block/order/__count/order__count.css);
+@import url(../block/order/__point/order__point.css);
+@import url(../block/order/__point/order__point-from/order__point-from.css);
+@import url(../block/order/__point/order__point-info/order__point-info.css);
+@import url(../block/order/__point/order__point-img/order__point-img.css);
+@import url(../block/order/__count/order__count-info/order__count-info.css);
+@import url(../block/order/__count/order__count-sum/order__count-sum.css);
+@import url(../block/order/__count/order__count-caption/order__count-caption.css);
+@import url(../block/order/__count/order__count-price/order__count-price.css);
+@import url(../block/order/__header/order__header.css);
+@import url(../block/order/__header/order__header-l/order__header-l.css);
+@import url(../block/order/__header/order__header-m/order__header-m.css);
+@import url(../block/order/__point/order__point-caption/order__point-caption.css);
+@import url(../block/order/__input/order__input.css);
+@import url(../block/order/__input/order__input-container/order__input-container.css);
+@import url(../block/order/__input/order__input-text/order__input-text.css);
+@import url(../block/order/__pay/order__pay.css);
+@import url(../block/order/__pay/order__pay-caption/order__pay-caption.css);
+@import url(../block/order/__card/order__card.css);
+@import url(../block/order/__point/order__point-gray/order__point-gray.css);
+@import url(../block/order/__text/order__text-l/order__text-l.css);
+@import url(../block/order/__text/order__text-caption/order__text-caption.css);
+@import url(../block/order/__text/order__text-purple/order__text-purple.css);
+@import url(../block/order/__text/order__text-card/order__text-card.css);
+@import url(../block/order/__text/order__text-green/order__text-green.css);
+@import url(../block/order/__text/order__text-link/order__text-link.css);
+@import url(../block/order/__confirm/order__confirm.css);
+@import url(../block/order/__confirm/order__confirm-btn/order__confirm-btn.css);
+@import url(../block/order/__confirm/order__confirm-offerta/order__confirm-offerta.css);
+
+@import url(../block/formalization/formalization.css);
+@import url(../block/formalization/__container/formalization__container.css);
+@import url(../block/formalization/__title/formalization__title.css);
+@import url(../block/formalization/__header/formalization__header.css);
+@import url(../block/formalization/__header/formalization__header-container/formalization__header-container.css);
+@import url(../block/formalization/__header/formalization__header-purple/formalization__header-purple.css);
+
+@import url(../block/popup/popup.css);
+@import url(../block/popup/__active/popup__active.css);
+@import url(../block/popup/__block/popup__block.css);
+@import url(../block/popup/__button/popup__button.css);
+@import url(../block/popup/__caption/popup__caption.css);
+@import url(../block/popup/__card/popup__card.css);
+@import url(../block/popup/__card/popup__card-checkbox/popup__card-checkbox.css);
+@import url(../block/popup/__card/popup__card-order/popup__card-order.css);
+@import url(../block/popup/__choice/popup__choice.css);
+@import url(../block/popup/__choice/popup__choice-btn/popup__choice-btn.css);
+@import url(../block/popup/__choice/popup__choice-active/popup__choice-active.css);
+@import url(../block/popup/__close/popup__close.css);
+@import url(../block/popup/__confirm/popup__confirm.css);
+@import url(../block/popup/__container/popup__container.css);
+@import url(../block/popup/__courier/popup__courier.css);
+@import url(../block/popup/__delete/popup__delete.css);
+@import url(../block/popup/__header/popup__header.css);
+@import url(../block/popup/__img/popup__img.css);
+@import url(../block/popup/__img/popup__img-mir/popup__img-mir.css);
+@import url(../block/popup/__img/popup__img-visa/popup__img-visa.css);
+@import url(../block/popup/__info/popup__info.css);
+@import url(../block/popup/__info/popup__info-caption/popup__info-caption.css);
+@import url(../block/popup/__info/popup__info-gray/popup__info-gray.css);
+@import url(../block/popup/__name/popup__name.css);
+@import url(../block/popup/__point/popup__point.css);
+@import url(../block/popup/__text/popup__text.css);
+@import url(../block/popup/__visible/popup__visible.css);
+
+
+.active {
+    display: none;
+}
+
+.order__pay-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.delivery__container-date {
+    gap: 3px
+}
+
+@media screen and (max-width:757px) {
+    .basket__card-gray {
+        gap: 29px;
+    }
+}
+
+.card__like {
+    background-image: url(../images/element_like.png);
+    width: 20px;
+    height: 20px;
+    /* ПОМЕНЯТЬ УРЛ */
+}
+
+.card__trash {
+    background-image: url(../images/element_trash.png);
+    width: 20px;
+    height: 20px;
+    /* ПОМЕНЯТЬ УРЛ */
+}
+
+.card__header {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:757px) {
+    .price__off {
+        display: none;
+    }
+}
+
+.price__text-m {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+.price__on {
+    display: none
+}
+
+@media screen and (max-width:757px) {
+    .price__on {
+        display: flex;
+    }
+}
+
+.order__confirm-img {
+    width: 13px;
+    height: 24px;
+}
+
+.user__info {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:757px) {
+    .user__info {
+        gap: 7px;
+        max-width: 93%;
+    }
+}
+
+.user__input {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    height: 64px;
+}
+
+@media screen and (max-width:757px) {
+    .user__input {
+        flex-direction: column;
+        height: auto;
+        gap: 8px;
+    }
+}
+
+
+.user__input-text {
+    all: unset;
+    border: none;
+    border-bottom: 1px solid #0000001A;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+
+}
+
+.user__input-error {
+    color: red;
+}
+
+.user__input-caption {
+    color: #9797AF;
+}
+
+@media screen and (max-width:757px) {
+    .user__input-caption {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+.user__card {
+    display: flex;
+    gap: 8px;
+}
+
+.user__card-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.user__input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 64px;
+}
+
+.pay__text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #9797AF;
+    margin: 0;
+    margin-top: 7px;
+}
+
+.order__pay-card {
+    background-color: inherit;
+}
+
+@media screen and (max-width:757px) {
+    .order__pay-card {
+        display: none;
+    }
+}
+
+.footer {
+    background-color: #6725A8;
+    /* height: 98px; */
+    width: 100%;
+    position: relative;
+}
+
+.footer::after {
+    content: '';
+    display: block;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 38px;
+    border-radius: 0 0 24px 24px;
+    position: absolute;
+    top: -1px;
+}
+
+.footer__container {
+    width: 100%;
+    height: 98px;
+    align-items: end;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 757px) {
+    .footer__container {
+        height: 155px;
+        align-items: center;
+    }
+}
+
+.footer__caption {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+    margin-bottom: 21px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar {
+    height: 56px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #FFFFFF;
+    display: flex;
+}
+
+@media screen and (min-width:758px) {
+    .navbar {
+        display: none;
+    }
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 13px;
+}
+
+.navbar__block {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.navbar__home {
+    background-image: url(../images/navbar__home.png);
+}
+
+.navbar__search {
+    background-image: url(../images/navbar__search.png);
+}
+
+.navbar__basket {
+    background-image: url(../images/navbar__basket.png);
+    position: relative;
+}
+
+.navbar__like {
+    background-image: url(../images/navbar__like.png);
+}
+
+.navbar__user {
+    background-image: url(../images/navbar__user.png);
+}
+
+.navbar__basket-count {
+    height: 16px;
+    width: 16px;
+    background-color: #F55123;
+    color: #FFFFFF;
+    position: absolute;
+    border-radius: 16px;
+    right: 0;
+    transform: translate(30%, -30%);
+    top: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 18px;
+}
+
+
+.none {
+    display: none;
+    /* убирает у карандашей ненужный див */
+}
+
+
+
+.card__left-active {
+    display: block;
+}
+
+.delivery__container-img {
+    display: flex;
+    gap: 8px;
+    position: relative;
+}
+
+.card__count-span {
+    position: absolute;
+    background-color: #F55123;
+    border-radius: 16px;
+    height: 16px;
+    min-width: 16px;
+    top: 0px;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.card__avatar-small {
+    width: 40px;
+    height: 56px;
+}
+
+.order__price {
+    display: flex;
+}
+
+
+
+.card__tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.card__tooltip .card__hang-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.card__tooltip .card__tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card__tooltip:hover .card__tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+.price__tooltip {
+    position: absolute;
+    top: 18px;
+    width: 239px;
+    right: 0;
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+    text-align: start;
+    transform: translate(7%, 0);
+}
+
+.price__tooltip-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.price__tooltip-container {
+    padding: 11px 16px 13px 16px;
+    display: flex;
+    gap: 8px;
+}
+
+
+.delivery__container-disable{
+    display: none;
+}
+
+.popup__pay{
+    width: 400px;
+    border-radius: 16px;
+    height: 408px;
+}
+
+.popup__delivery{
+    width: 500px;
+    height: 408px;
+    border-radius: 16px;
+
+}

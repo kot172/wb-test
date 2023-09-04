@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Товары и точка</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__menu">
+          <div class="header__menu-burger">
+            <img src="./images/header_burger.svg" class="header__menu-img">
+          </div>
+          <div class="header__logo">
+            <!-- <img src="./images/logo_WB.svg">   -->
+          </div>
+        </div>
+        <div class="header__loupe"></div>
+        <div class="header__search">
+          <div class="header__search-container">
+            <input class="header__input" placeholder="Я ищу...">
+            <img src="./images/header_search.svg">
+          </div>
+        </div>
+        <div class="header__user">
+          <div class="header__user-profile">
+
+            <div class="header__user-icon">
+              <img src="./images/header_profile.svg" alt="профиль">
+            </div>
+            <p class="header__user-text"> Профиль</p>
+
+          </div>
+          <div class="header__user-basket">
+
+            <div class="header__user-icon">
+              <span id="result__basket" class="header__user-icon_count">3</span>
+              <img src="./images/header_basket.svg" alt="корзина">
+            </div>
+
+            <p class="header__user-text">Корзина</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="basket">
+        <h1 class="basket__title">Корзина</h1>
+        <div class="basket__goods">
+
+          <div class="basket__header">
+            <div id="basket__allinput" class="basket__allinput">
+              <label class="custom__checkbox">
+              <input id="allInput" name="allInput" checked="checked" type="checkbox" class="basket__input">
+              <!-- <span class="checkmark"></span> -->
+              <span> Выбрать всё</span>
+            </label>
+
+            </div>
+
+
+            <div id="basket__count" class="basket__count basket__none">
+              <p id="basket__product" class="basket__count-product">266 товаров</p>
+              <span>&nbsp;·</span>
+              <p id="basket__sum" class="basket__count-sum">&nbsp;2 100 569 сом</p>
+            </div>
+
+
+
+            <div class="basket__disable">
+              <img class="basket__off" id="basket__off-goods" src="./images/basket__disable.svg" alt="скрыть">
+            </div>
+
+          </div>
+
+          <section class="basket__card" id="basket__card-goods">
+
+
+          </section>
+
+
+        </div>
+        <div class="basket__missing">
+          <div class="basket__header">
+            <h1 class="basket__header-missing">Отсутствуют · 3 товара</h1>
+
+            <div class="basket__disable">
+              <img class="basket__off" id="basket__off-missing" src="./images/basket__disable.svg" alt="скрыть">
+            </div>
+          </div>
+
+          <div class="basket__card basket__card-gray" id="basket__card-missing">
+
+          </div>
+        </div>
+
+        <div class="formalization">
+
+          <div class="formalization__container">
+
+            <div class="formalization__header-container">
+              <h1 class="formalization__header">Способ доставки</h1>
+              <p id="btn__point" class="formalization__header-purple">Изменить</p>
+            </div>
+
+            <div class="delivery formalization__title">
+
+              <div class="delivery__point">
+                <div id="pointOrCurier" class="delivery__container">
+                  <p id="deliveryMethod" class="delivery__text-m delivery__point-info">Пункт выдачи</p>
+
+
+                  <div id="deliveryAdress" class="delivery__point-info">
+                    <p class="delivery__text-l">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                    <p class="delivery__text-s"><img src="./images/point_star.png" alt="рейтинг"> 4.99 &nbsp;Ежедневно с
+                      10 до
+                      21</p>
+                  </div>
+
+                </div>
+
+                <div class="delivery__container">
+                  <p class="delivery__text-m">Стоимость доставки</p>
+                  <p class="delivery__text-l">Бесплатно</p>
+
+                </div>
+
+                <div class="delivery__container delivery__container-date">
+                  <p class="delivery__text-m delivery__text-date">5—6 февраля</p>
+                  <div id="imgDelivery" class="delivery__container-img">
+
+                  </div>
+                </div>
+
+                <div id="containerBlock" 
+                class="delivery__container delivery__container-date delivery__container-disable">
+                  <p class="delivery__text-m delivery__text-date">7—8 февраля</p>
+                  <div id="imgDeliverySlow" class="delivery__container-img">
+                </div>
+
+              </div>
+
+              <div class="delivery__caption">
+                <img src="./images/order__icon.svg" alt="галочка">
+                <p class="delivery__text-s">Обратная доставка товаров на склад при отказе —
+                  <span class="order__text-l order__text-green">бесплатно</span>
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="formalization__container">
+
+            <div class="formalization__header-container">
+              <h1 class="formalization__header">Способ оплаты</h1>
+              <p id="btnPay" class="formalization__header-purple">Изменить</p>
+            </div>
+
+            <div class="pay formalization__title">
+
+
+              <div class="user__card">
+
+                <p class="user__card-text"><img src="./images/icon-mir.svg">  <span>&nbsp;1234 56•• •••• 1234</span> 01/30</p>
+              </div>
+
+              <p class="pay__text">Спишем оплату с карты при получении</p>
+            </div>
+          </div>
+
+          <div class="formalization__container">
+            <div class="formalization__title">
+              <h1 class="formalization__header">Получатель</h1>
+              <div class="user__info">
+                <div class="user__input">
+                  <div class="user__input-container">
+                    <span class="user__input-caption">ошибка вверх</span>
+                    <input id="inputName" class="user__input-text" placeholder="Имя">
+                    <span id="errorName" class="user__input-error"></span>
+                  </div>
+
+                  <div class="user__input-container">
+                    <span class="user__input-caption">ошибка вверх</span>
+                    <input id="inputSurname" class="user__input-text" placeholder="Фамилия">
+                    <span id="errorSurname" class="user__input-error"></span>
+                  </div>
+                </div>
+                <div class="user__input">
+                  <div class="user__input-container">
+                    <span class="user__input-caption">ошибка вверх</span>
+                    <input id="inputEmail" class="user__input-text" type="email" placeholder="Почта">
+                    <span id="errorEmail" class="user__input-error"></span>
+                  </div>
+                  <div class="user__input-container">
+                    <span class="user__input-caption">Телефон</span>
+                    <input id="inputPhone" class="user__input-text" placeholder="+7 988 123-45-67">
+                    <span id="errorPhone" class="user__input-error"></span>
+                  </div>
+                  <div class="user__input-container">
+                    <span class="user__input-caption">ошибка вверх</span>
+                    <input id="inputInn" class="user__input-text" type="number" placeholder="Инн">
+                    <span id="errorInn" class="user__input-error"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        </section>
+
+
+      </div>
+      </div>
+
+      <section class="order">
+        <div class="order__container">
+          <div class="order__count">
+            <div class="order__header">
+              <h1 class="order__header-l">Итого</h1>
+              <div class="order__price">
+                <h1 id="order__price" class="order__count-sum"></h1>
+                <p class="order__count-caption"> &nbsp;сом</p>
+              </div>
+            </div>
+            <div class="order__total">
+              <div>
+                <p class="order__count-info">203 товара</p>
+                <p class="order__count-info">Скидка</p>
+                <p class="order__count-info">Доставка</p>
+              </div>
+              <div>
+
+                <p id="order__sale" class="order__count-price">2 302 048 сом</p>
+                <p id="block__sale" class="order__count-price">−200 985 сом</p>
+                <p class="order__count-price">Бесплатно</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order__point">
+            <div class="order__point-info">
+              <div class="order__point-from">
+                <h1 id="orderName" class="order__header-m">Доставка в пункт выдачи</h1>
+                <img id="btnPointOrder" class="order__edit" src="./images/edit_point.svg" alt="редактировать">
+              </div>
+              <p id="orderText" class="order__text-l">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+              <p id="orderDate" class="order__text-l order__text-purple">5–8 фев</p>
+            </div>
+
+            <div class="order__point-gray">
+              <img src="./images/order__icon.svg" class="order__point-img" alt="галочка">
+              <div class="order__point-caption">
+                <p class="order__text-l">Обратная доставка товаров на склад при отказе —
+                  <span class="order__text-l order__text-green">бесплатно</span>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="order__pay">
+            <div class="order__pay-card">
+              <div class="order__pay-info">
+                <h1 class="order__header-m">Оплата картой</h1>
+                <img id="btnPayOrder" class="order__edit" src="./images/edit_point.svg" alt="редактировать">
+              </div>
+              <!-- ПОМЕНЯТЬ КЛАСС И ИД-->
+              <div class="order__card">
+                <img src="./images/icon-mir.svg" alt="mir">
+                <p class="order__text-l order__text-card"> 1234 12•• •••• 1234 </p>
+              </div>
+            </div>
+            <div class="order__pay-caption">
+              <div class="order__input-container">
+                <input id="order__input" onclick="changeButtonText()" class="order__input" type="checkbox">
+                <p class="order__text-l order__text-card">Списать оплату сразу</p>
+              </div>
+              <div class="order__input-caption">
+                <p class="order__text-l order__text-caption">Спишем оплату с карты при получении</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="order__confirm">
+            <button type="button" id="order__button" class="order__confirm-btn">Заказать</button>
+            <div class="order__confirm-offerta">
+              <img class="order__confirm-img" src="./images/order_ok.png" alt="галочка">
+              <p class="order__text-l">Соглашаюсь <a href="#" class="order__text-link">с правилами пользования торговой
+                  площадкой</a>
+                и<a href="#" class="order__text-link"> возврата</a></p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__caption">© 2022 ООО «Товары и точка»</p>
+      </div>
+    </footer>
+    <div class="navbar">
+      <section class="navbar__container">
+        <div class="navbar__block navbar__home"></div>
+        <div class="navbar__block navbar__search"></div>
+        <div class="navbar__block navbar__basket">
+          <div class="navbar__basket-count">3</div>
+        </div>
+        <div class="navbar__block navbar__like"></div>
+        <div class="navbar__block navbar__user"></div>
+      </section>
+    </div>
+
+
+
+
+    <div id="popupPay" class="popup">
+      <div class="popup__container popup__pay">
+        <div class="popup__header">
+          <p class="popup__name">Способ оплаты</p>
+          <button id="payClose" class="popup__close" type="button"></button>
+        </div>
+        <div class="popup__card">
+
+          <div class="popup__block popup__pay-block">
+            <input type="radio" class="popup__card-checkbox" checked="checked">
+            <p class="popup__text"><img class="popup__img" src="./images/icon-mir.svg">1234 56•• •••• 1234</p>
+          </div>
+          <div class="popup__block popup__pay-block">
+            <input type="radio" class="popup__card-checkbox">
+            <p class="popup__text"><img class="popup__img" src="./images/icon-visa.svg">1234 56•• •••• 1234</p>
+          </div>
+          <div class="popup__block popup__pay-block">
+            <input type="radio" class="popup__card-checkbox">
+            <p class="popup__text"><img class="popup__img" src="./images/icon-mastercard.svg">1234 56•• •••• 1234</p>
+          </div>
+          <div class="popup__block popup__pay-block">
+            <input type="radio" class="popup__card-checkbox">
+            <p class="popup__text"><img class="popup__img" src="./images/icon-maestro.svg">1234 56•• •••• 1234</p>
+          </div>
+
+        </div>
+        <div class="popup__confirm">
+          <button type="button" class="popup__button">Выбрать</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="popupDelivery" class="popup">
+      <div class="popup__container popup__delivery">
+        <div class="popup__header">
+          <p class="popup__name">Способ доставки</p>
+          <button id="deliveryClose" class="popup__close" type="button"></button>
+        </div>
+
+        <div class="popup__choice">
+          <button id="btnChoicePoint" type="button" class="popup__choice-btn popup__choice-active">В пункт
+            выдачи</button>
+          <button id="btnChoiceCourier" type="button" class="popup__choice-btn">Курьером</button>
+
+        </div>
+
+        <div class="popup__card popup__card-order">
+          <div id="popup__point" class="popup__point popup__visible">
+            <p class="popup__caption">Мои адреса</p>
+            <div class="popup__block">
+              <input id="popupDeliveryInput" type="radio" class="popup__card-checkbox">
+              <div class="popup__info">
+                <p class="popup__text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                <p class="popup__info-caption"><img class="popup__star" src="./images/popup__star.png" alt="звездочка">
+                  <span class="popup__info-gray">Пункт выдачи</span>
+                </p>
+              </div>
+              <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            </div>
+            <div class="popup__block">
+              <input id="popupDeliveryInput" type="radio" class="popup__card-checkbox">
+              <div class="popup__info">
+                <p class="popup__text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                <p class="popup__info-caption"><img class="popup__star" src="./images/popup__star.png" alt="звездочка">
+                  4.99
+                  <span class="popup__info-gray">Пункт выдачи</span>
+                </p>
+              </div>
+              <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            </div>
+            <div class="popup__block">
+              <input id="popupDeliveryInput" type="radio" class="popup__card-checkbox">
+              <div class="popup__info">
+                <p class="popup__text">г. Бишкек, улица Табышалиева, д. 57</p>
+                <p class="popup__info-caption"><img class="popup__star" src="./images/popup__star.png" alt="звездочка">
+                  4.99
+                  <span class="popup__info-gray">Пункт выдачи</span>
+                </p>
+              </div>
+              <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            </div>
+            <div class="popup__confirm">
+              <button id="btnPoint" type="button" class="popup__button">
+                Выбрать</button>
+            </div>
+          </div>
+
+          <div id="popup__courier" class="popup__courier">
+            <p class="popup__caption">Мои адреса</p>
+            <div class="popup__block">
+              <input id="popupDeliveryInput" type="radio" class="popup__card-checkboxCourier">
+              <div class="popup__info">
+                <p class="popup__text">Бишкек, улица Табышалиева, 57</p>
+              </div>
+              <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            </div>
+            <div class="popup__block">
+              <input id="popupDeliveryInput" type="radio" class="popup__card-checkboxCourier">
+              <div class="popup__info">
+                <p class="popup__text">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
+              </div>
+              <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            </div>
+            <div class="popup__block">
+              <input id="popupDeliveryInput" type="radio" class="popup__card-checkboxCourier">
+              <div class="popup__info">
+                <p class="popup__text">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
+              </div>
+              <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            </div>
+            <div class="popup__confirm">
+              <button id="btnCourier" type="button" class="popup__button">
+                Выбрать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="popup__confirm">
+          <button id="popupDeliveryButton" type="button" class="popup__button">
+            Выбрать</button>
+        </div> -->
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+  </div>
+
+
+  <!-- <template id="delivery__template">
+
+    <img id="delivery__image" class="delivery__image" alt="картинка"></div>
+
+
+
+  </template> -->
+
+
+  <template id="basket__card">
+    <div id="card" class="card">
+      <div class="card__info">
+        <div class="card__checkbox">
+          <label class="custom__checkbox">
+            <input name="basket__input" id="basket__input" type="checkbox" class="basket__input">
+            <!-- <span class="checkmark"></span> -->
+          </label>
+        </div>
+        <div class="card__avatar-container"><img class="card__avatar" src="" alt="avatar"></div>
+        <p id="card__paramsImg" class="card__params card__params-img"></p>
+
+
+        <div class="card__text">
+
+          <div class="card__header">
+
+            <div class="price__on">
+              <div class="price__new">
+                <div id="price__new-m" class="price__new-sum"></div>
+                <div class="price__new-currency">сом</div>
+              </div>
+              <div class="price__old"> </div>
+            </div>
+            <p id="card__title" class="card__title"></p>
+          </div>
+          <div id="card__hang" class="card__hang">
+            <p id="card__color" class="card__params"></p>
+            <p id="card__params" class="card__params"></p>
+          </div>
+          <div class="card__hang-gray">
+            <p id="card__from" class="card__params card__params-gray"></p>
+            <div class="card__author">
+              <p id="card__author-text" class="card__params card__params-gray"> </p>
+              <div class="card__tooltip"><img src="./images/card_icon.png" class="card__hang-icon">
+                <span class="card__tooltip-text">Всплывающая подсказка</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card__calculation">
+        <div class="card__quantity">
+          <div class="card__count">
+            <button id="decrement__btn" type="button" class="card__button">-</button>
+            <p id="card__count" class="card__count-number"></p>
+            <button id="increment__btn" type="button" class="card__button">+</button>
+          </div>
+          <span id="count__balance" class="card__left card__left-none">Осталось 2 шт.</span>
+          <div class="card__element">
+            <div class="card__like"></div>
+            <div class="card__trash"></div>
+          </div>
+        </div>
+
+        <div class="price price__off">
+          <div class="price__new">
+            <div id="price__new-l" class="price__new-sum"></div>
+            <div class="price__new-currency">сом</div>
+          </div>
+          <!-- <div id="price__old" class="price__old"> -->
+            <div class="price__old">
+             <span id="price__old"></span>
+             <div class="price__tooltip">
+              <div class="price__tooltip-container">
+              <div class="price__tooltip-block">
+                <span>Скидка 55%</span>
+                <span>Скидка покупателя 10%</span>
+              </div>
+              <div class="price__tooltip-block">
+                <span>−300 сом</span>
+                <span>−30 сом</span>
+              </div></div>
+
+             </div>
+            </div>
+            
+            
+
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </template>
+
+
+  <template id="card-template">
+    <div class="card">
+      <div class="card__info">
+        <div class="card__avatar-container">
+          <img class="card__avatar card__avatar-missing" src="">
+        </div>
+
+
+        <div class="card__text card__text-missing">
+          <p id="card__title" class="card__title card__title-gray"></p>
+          <div id="card__hang" class="card__hang">
+            <p id="card__color" class="card__params card__params-gray"></p>
+            <p id="card__params" class="card__params card__params-gray"></p>
+          </div>
+        </div>
+
+      </div>
+      <div class="card__calculation">
+        <div class="card__quantity">
+
+
+          <div class="card__element">
+            <img src="./images/element_like.png" alt="like">
+            <img src="./images/element_trash.png" alt="trash">
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="./pages/index.js"></script>
+</body>
+
+</html>

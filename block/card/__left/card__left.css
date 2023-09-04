@@ -1,0 +1,15 @@
+.card__left {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FF3B30;
+    display: none;
+}
+
+@media screen and (max-width: 757px) {
+    .card__left{
+        align-self: center;
+        margin-left: 12px;
+        width: 88px;
+    }
+}

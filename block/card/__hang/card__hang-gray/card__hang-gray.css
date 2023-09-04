@@ -1,0 +1,5 @@
+.card__hang-gray{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

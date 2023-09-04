@@ -1,0 +1,7 @@
+.header__user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}

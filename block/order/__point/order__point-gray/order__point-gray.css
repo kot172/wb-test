@@ -1,0 +1,14 @@
+.order__point-gray {
+    background-color: #F6F6FA;
+    width: 100%;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+@media screen and (max-width:757px) {
+    .order__point-gray{
+        width:98%;
+    }
+}
