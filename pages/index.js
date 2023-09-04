@@ -118,7 +118,6 @@ function renderCards() {
 renderCards();
 
 //корзина
-// разобраться с cardHang, убирает у 3й карточки ненужный див
 function renderBasketCard() {
     const basketCardContainer = document.getElementById("basket__card-goods");
     const basketCardTemplate = document.getElementById("basket__card");// VYNESTI
@@ -186,16 +185,7 @@ allCheckboxes()
 
 
 
-// функция, убирает блок с параметрами
-// function paramsHang() {
-//     const cardHang = document.querySelectorAll(".card__hang");
-//     cardHang.forEach((element) => {
-//         if (element.textContent.length <= 37) {
-//             //element.classList.add("none");
-//         }
-//     });
-// }
-// paramsHang();
+
 
 //функция, которая меняет текст заказать на сумму
 function changeButtonText() {
@@ -408,9 +398,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let countDisplay = card.querySelector('.card__count-number');
         let countMaxDisplay = card.querySelector('.card__left');
         const priceDisplay = card.querySelector('#price__new-l');
-        const priceOldDisplay = card.querySelector('#price__old');
+        const priceOldDisplay = card.querySelector('#price__old'); // старая цена для desktop
+        const priceOldDisplaySmall = card.querySelector('#price__oldSmall');// старая цена для mobile
+        const priceDisplaySmall = card.querySelector('#price__new-m');
         const originalPrice = priceDisplay.textContent;
         const originalOldPrice = priceOldDisplay.textContent;
+      
+        
 
         // считаем итоговую сумму
         let count = parseInt(countDisplay.textContent, 10);
@@ -418,6 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
         priceDisplay.textContent = sumPrice.toLocaleString();
         sumOld = count * originalOldPrice;
         priceOldDisplay.textContent = sumOld.toLocaleString() + ' сом';
+        priceOldDisplaySmall.textContent = sumOld.toLocaleString() + ' сом2';
 
         const countMax = parseInt(countMaxDisplay.textContent, 10);
 
@@ -440,9 +435,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 count--;
                 countDisplay.textContent = count;
                 price = (count * originalPrice);
-                priceDisplay.textContent = Math.round(price).toLocaleString();
+                priceDisplay.textContent = Math.round(price).toLocaleString() + 'ccc';
                 priceOld = (count * originalOldPrice)
                 priceOldDisplay.textContent = Math.round(priceOld).toLocaleString() + ' сом';
+                priceOldDisplaySmall.textContent = Math.round(priceOld).toLocaleString() + ' сом';
                 getTotalSum();
                 getTotalSale();
                 totalSale();
@@ -460,6 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 priceDisplay.textContent = Math.round(price).toLocaleString();
                 priceOld = (count * originalOldPrice)
                 priceOldDisplay.textContent = Math.round(priceOld).toLocaleString() + ' сом';
+                priceOldDisplaySmall.textContent = Math.round(priceOld).toLocaleString() + ' сом';
                 getTotalSum();
                 getTotalSale();
                 totalSale();
@@ -498,7 +495,7 @@ const getTotalSum = () => {
             );
             const count = parseInt(
                 val.querySelector(".card__count-number").textContent.replace(/\s/g, "")
-            );
+            ); 
             return acc + price * count;
         }
         return acc;

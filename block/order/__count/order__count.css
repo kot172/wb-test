@@ -4,3 +4,9 @@
     justify-content: space-between;
     gap: 9px;
 }
+
+@media screen and (max-width: 757px) {
+    .order__count{
+        gap: 1px;
+    }
+}

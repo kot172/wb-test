@@ -1,5 +1,10 @@
 .card__trash {
-    background-image: url(../images/element_trash.png);
+    background-image: url(../../../images/trash.svg);
     width: 20px;
     height: 20px;
+    cursor: pointer;
+}
+
+.card__trash:hover{
+    background-image: url(../../../images/trash-active.svg);
 }

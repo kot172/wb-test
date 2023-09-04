@@ -4,6 +4,7 @@
     line-height: 24px;
     background-color: inherit;
     border: none;
+    all: unset;
     width: 95%;
     height: 100%;
     margin: 0;

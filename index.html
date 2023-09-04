@@ -14,7 +14,7 @@
       <div class="header__container">
         <div class="header__menu">
           <div class="header__menu-burger">
-            <img src="./images/header_burger.svg" class="header__menu-img">
+            <!-- <div class="header__menu-img"></div> -->
           </div>
           <div class="header__logo">
             <!-- <img src="./images/logo_WB.svg">   -->
@@ -87,7 +87,7 @@
 
         </div>
         <div class="basket__missing">
-          <div class="basket__header">
+          <div class="basket__header basket__missing-header">
             <h1 class="basket__header-missing">Отсутствуют · 3 товара</h1>
 
             <div class="basket__disable">
@@ -448,11 +448,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="popup__confirm">
-          <button id="popupDeliveryButton" type="button" class="popup__button">
-            Выбрать</button>
-        </div> -->
     </div>
   </div>
 
@@ -465,14 +460,7 @@
   </div>
 
 
-  <!-- <template id="delivery__template">
-
-    <img id="delivery__image" class="delivery__image" alt="картинка"></div>
-
-
-
-  </template> -->
-
+  
 
   <template id="basket__card">
     <div id="card" class="card">
@@ -496,7 +484,7 @@
                 <div id="price__new-m" class="price__new-sum"></div>
                 <div class="price__new-currency">сом</div>
               </div>
-              <div class="price__old"> </div>
+              <div id="price__oldSmall" class="price__old"> </div>
             </div>
             <p id="card__title" class="card__title"></p>
           </div>
@@ -534,12 +522,11 @@
             <div id="price__new-l" class="price__new-sum"></div>
             <div class="price__new-currency">сом</div>
           </div>
-          <!-- <div id="price__old" class="price__old"> -->
           <div class="price__old">
             <span id="price__old"></span>
             <div class="price__tooltip">
               <div class="price__tooltip-container">
-                <div class="price__tooltip-block">
+                <div class="price__tooltip-block price__tooltip-gray">
                   <span>Скидка 55%</span>
                   <span>Скидка покупателя 10%</span>
                 </div>
@@ -583,12 +570,12 @@
 
       </div>
       <div class="card__calculation">
-        <div class="card__quantity">
+        <div class="card__quantity card__quantity-missing">
 
 
           <div class="card__element">
-            <img src="./images/element_like.png" alt="like">
-            <img src="./images/element_trash.png" alt="trash">
+            <div class="card__like"></div>
+            <div class="card__trash"></div>
           </div>
 
 

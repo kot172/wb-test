@@ -194,3 +194,18 @@
 @import url(../block/footer/footer.css);
 @import url(../block/footer/__container/footer__container.css);
 @import url(../block/footer/__caption/footer__caption.css);
+
+
+.price__tooltip-gray{
+    color: #9797AF;
+}
+
+.basket__missing-header{
+padding-bottom: 18px;
+}
+
+.card__quantity-missing {
+    justify-content: end;
+    width: 98%;
+    /* max-width не забыть */
+}

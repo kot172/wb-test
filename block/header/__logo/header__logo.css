@@ -9,5 +9,6 @@
     .header__logo{
         background-image: url(../../../images/logo__wb-s.png);
         width: 206px;
+        margin-left: 3px;
     }
 }

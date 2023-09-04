@@ -1,5 +1,10 @@
 .card__like {
-    background-image: url(../images/element_like.png);
+    background-image: url(../../../images/like.svg);
     width: 20px;
     height: 20px;
+    cursor: pointer;
+}
+
+.card__like:hover {
+    background-image: url(../../../images/like-active.svg);
 }

@@ -20,4 +20,10 @@
     .header {
         height: 80px;
     }
+
+    .header::after{
+    height: 23px;
+    bottom: 0px;
+    }
 }
+

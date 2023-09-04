@@ -1,4 +1,11 @@
-.basket__allinput{
+.basket__allinput {
     display: flex;
-    gap:10px;
+    gap: 10px;
+}
+
+@media screen and (max-width: 757px) {
+    .basket__allinput {
+        margin-top: -13px;
+        margin-left: 6px;
+    }
 }

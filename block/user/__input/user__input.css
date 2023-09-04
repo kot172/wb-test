@@ -9,6 +9,6 @@
     .user__input {
         flex-direction: column;
         height: auto;
-        gap: 8px;
+        gap: 9px;
     }
 }

@@ -3,3 +3,9 @@
     gap: 16px;
     flex-direction: column;
 }
+
+@media screen and (max-width: 757px) {
+    .delivery__point{
+        gap:17px;
+    }
+}

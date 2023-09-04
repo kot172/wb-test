@@ -9,8 +9,7 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    display: none;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
     text-align: start;
     transform: translate(7%, 0);
