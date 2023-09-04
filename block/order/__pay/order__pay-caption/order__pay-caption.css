@@ -3,6 +3,6 @@
     flex-direction: column;
     gap:5px;
     background-color: #F0ECF4;
-    height: 62px;
+    min-height: 42px;
     border-radius: 8px;
 }

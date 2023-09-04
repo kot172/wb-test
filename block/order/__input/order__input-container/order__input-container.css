@@ -1,5 +1,6 @@
 .order__input-container{
     display: flex;
     gap: 5px;
-    margin-left: 3px;
+    margin: 8px;
+    height: 22px;
 }

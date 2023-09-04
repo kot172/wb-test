@@ -10,17 +10,17 @@
 
 .card__tooltip .card__tooltip-text {
     visibility: hidden;
-    width: 120px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
+    width: 280px;
+    height: 104px;
+    background-color: #ffffff;
+    color: #000000;
     border-radius: 6px;
-    padding: 5px;
+    padding: 11px 16px 13px;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-49%, 18%);
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -28,4 +28,7 @@
 .card__tooltip:hover .card__tooltip-text {
     visibility: visible;
     opacity: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }

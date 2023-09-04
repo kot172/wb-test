@@ -1,4 +1,10 @@
 .popup__delete{
-    width: 15px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-image: url(../../../images/popup-trash.svg);
+}
+
+.popup__delete:hover{
+    background-image: url(../../../images/trash-active.svg);
 }

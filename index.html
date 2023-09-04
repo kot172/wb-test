@@ -284,7 +284,11 @@
         </div>
         <div class="order__pay-caption">
           <div class="order__input-container">
-            <input id="order__input" onclick="changeButtonText()" class="order__input" type="checkbox">
+
+            <label class="custom__checkbox">
+              <input id="order__input" onclick="changeButtonText()" class="order__input" type="checkbox">
+              <span class="checkmark"></span>
+            </label>
             <p class="order__text-l order__text-card">Списать оплату сразу</p>
           </div>
           <div class="order__input-caption">
@@ -390,7 +394,7 @@
                 <span class="popup__info-gray">Пункт выдачи</span>
               </p>
             </div>
-            <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            <div class="popup__delete"></div>
           </div>
           <div class="popup__block">
             <input id="popupDeliveryInput" type="radio" class="popup__card-checkbox">
@@ -401,7 +405,7 @@
                 <span class="popup__info-gray">Пункт выдачи</span>
               </p>
             </div>
-            <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            <div class="popup__delete"></div>
           </div>
           <div class="popup__block">
             <input id="popupDeliveryInput" type="radio" class="popup__card-checkbox">
@@ -412,7 +416,7 @@
                 <span class="popup__info-gray">Пункт выдачи</span>
               </p>
             </div>
-            <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            <div class="popup__delete"></div>
           </div>
           <div class="popup__confirm">
             <button id="btnPoint" type="button" class="popup__button">
@@ -427,21 +431,21 @@
             <div class="popup__info">
               <p class="popup__text">Бишкек, улица Табышалиева, 57</p>
             </div>
-            <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            <div class="popup__delete"></div>
           </div>
           <div class="popup__block">
             <input id="popupDeliveryInput" type="radio" class="popup__card-checkboxCourier">
             <div class="popup__info">
               <p class="popup__text">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
             </div>
-            <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            <div class="popup__delete"></div>
           </div>
           <div class="popup__block">
             <input id="popupDeliveryInput" type="radio" class="popup__card-checkboxCourier">
             <div class="popup__info">
               <p class="popup__text">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
             </div>
-            <img class="popup__delete" src="./images/popup__trash.png" alt="Удалить">
+            <div class="popup__delete"></div>
           </div>
           <div class="popup__confirm">
             <button id="btnCourier" type="button" class="popup__button">
@@ -498,7 +502,11 @@
             <div class="card__author">
               <p id="card__author-text" class="card__params card__params-gray"> </p>
               <div class="card__tooltip"><img src="./images/card_icon.png" class="card__hang-icon">
-                <span class="card__tooltip-text">Всплывающая подсказка</span>
+                <div class="card__tooltip-text">
+                  <p class="card__tooltip-organization"></p>
+                  <p class="card__tooltip-ogrn"></p>
+                  <p class="card__tooltip-adress"></p>
+                </div>
               </div>
             </div>
           </div>
@@ -536,17 +544,10 @@
                   <span>−30 сом</span>
                 </div>
               </div>
-
             </div>
           </div>
-
-
-
-
         </div>
       </div>
-
-
     </div>
     </div>
 

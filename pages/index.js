@@ -18,6 +18,8 @@ const cardsData = [
         cardColor: "Цвет: белый",
         cardFrom: "Коледино WB",
         cardAuthor: "OOO Вайлдберриз",
+        ogrn: "ОГРН: 1067746062449",
+        adress: "142181, Московская обл, г.о. Подольск, д Коледино, тер. Индустриальный парк Коледино, д. 6, стр. 1",
         img: "./images/img-1.png",
         cardPrice: "522",
         CardPriceOld: "1051",
@@ -32,6 +34,8 @@ const cardsData = [
         cardColor: "Цвет: прозрачный",
         cardFrom: "Коледино WB",
         cardAuthor: "OOO Мегапрофстиль",
+        ogrn: "ОГРН: 5167746237148",
+        adress: "129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34",
         img: "./images/img-2.png",
         cardPrice: "10500.235",
         CardPriceOld: "11500.235",
@@ -45,6 +49,8 @@ const cardsData = [
         cardParams: "",
         cardFrom: "Коледино WB",
         cardAuthor: "OOO Вайлдберриз",
+        ogrn: "ОГРН: 1067746062449",
+        adress: "142181, Московская обл, г.о. Подольск, д Коледино, тер. Индустриальный парк Коледино, д. 6, стр. 1",
         img: "./images/img-3.png",
         cardPrice: "247",
         CardPriceOld: "475",
@@ -135,8 +141,11 @@ function renderBasketCard() {
         const cardPriceL = basketCardClone.getElementById("price__new-l");
         const cardPriceOld = basketCardClone.getElementById("price__old");
         const cardCount = basketCardClone.getElementById("card__count");
-        const CardMaxCount = basketCardClone.getElementById("count__balance")
-        const cardHang = basketCardClone.getElementById('card__hang')
+        const CardMaxCount = basketCardClone.getElementById("count__balance");
+        const cardHang = basketCardClone.getElementById('card__hang');
+        const cardOrganization = basketCardClone.querySelector('.card__tooltip-organization');
+        const cardOgrn = basketCardClone.querySelector('.card__tooltip-ogrn');
+        const cardAdress = basketCardClone.querySelector('.card__tooltip-adress')
 
         cardTitle.textContent = cardData.cardTitle;
         cardParams.textContent = cardData.cardParams;
@@ -150,7 +159,10 @@ function renderBasketCard() {
         cardPriceOld.textContent = cardData.CardPriceOld;
         cardCount.textContent = cardData.count;
         CardMaxCount.textContent = cardData.maxCount;
-
+        cardOrganization.textContent = cardData.cardAuthor.toLocaleUpperCase();
+        cardOgrn.textContent = cardData.ogrn;
+        cardAdress.textContent = cardData.adress;
+ 
 
         basketCardContainer.appendChild(basketCardClone);
 
@@ -185,7 +197,8 @@ allCheckboxes()
 
 
 
-
+const orderCaption = document.querySelector('.order__input-caption')
+console.log(orderCaption);
 
 //функция, которая меняет текст заказать на сумму
 function changeButtonText() {
@@ -193,9 +206,11 @@ function changeButtonText() {
     if (orderInput.checked) {
         // Если чекбокс отмечен, меняем текст кнопки на "Выключить"
         orderBtn.textContent = orderPrice.textContent + ' сом';
+        orderCaption.style.display = "none";
     } else {
         // Если чекбокс не отмечен, меняем текст кнопки на "Включить"
         orderBtn.textContent = "Заказать";
+        orderCaption.style.display = "block";
     }
 }
 

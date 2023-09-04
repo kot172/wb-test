@@ -72,6 +72,9 @@
 @import url(../block/card/__params/card__params-img/card__params-img.css);
 @import url(../block/card/__params/card__params-gray/card__params-gray.css);
 @import url(../block/card/__tooltip/card__tooltip.css);
+@import url(../block/card/__tooltip/card__tooltip-adress/card__tooltip-adress.css);
+@import url(../block/card/__tooltip/card__tooltip-ogrn/card__tooltip-ogrn.css);
+@import url(../block/card/__tooltip/card__tooltip-organization/card__tooltip-organization.css);
 
 @import url(../block/price/price.css);
 @import url(../block/price/__new/price__new.css);
@@ -201,3 +204,9 @@
 @import url(../block/footer/footer.css);
 @import url(../block/footer/__container/footer__container.css);
 @import url(../block/footer/__caption/footer__caption.css);
+
+
+
+
+
+
