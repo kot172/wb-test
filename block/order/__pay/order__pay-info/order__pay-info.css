@@ -1,0 +1,4 @@
+.order__pay-info {
+    display: flex;
+    justify-content: space-between;
+}

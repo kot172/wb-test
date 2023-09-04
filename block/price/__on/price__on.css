@@ -1,0 +1,9 @@
+.price__on {
+    display: none
+}
+
+@media screen and (max-width:757px) {
+    .price__on {
+        display: flex;
+    }
+}

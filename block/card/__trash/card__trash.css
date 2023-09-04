@@ -1,0 +1,5 @@
+.card__trash {
+    background-image: url(../images/element_trash.png);
+    width: 20px;
+    height: 20px;
+}

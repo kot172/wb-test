@@ -1,0 +1,9 @@
+.order__pay-card {
+    background-color: inherit;
+}
+
+@media screen and (max-width:757px) {
+    .order__pay-card {
+        display: none;
+    }
+}

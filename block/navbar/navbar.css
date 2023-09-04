@@ -1,0 +1,14 @@
+.navbar {
+    height: 56px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #FFFFFF;
+    display: flex;
+}
+
+@media screen and (min-width:758px) {
+    .navbar {
+        display: none;
+    }
+}

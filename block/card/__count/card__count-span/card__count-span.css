@@ -1,0 +1,14 @@
+.card__count-span {
+    position: absolute;
+    background-color: #F55123;
+    border-radius: 16px;
+    height: 16px;
+    min-width: 16px;
+    top: 0px;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+}

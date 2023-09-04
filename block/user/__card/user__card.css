@@ -1,0 +1,4 @@
+.user__card {
+    display: flex;
+    gap: 8px;
+}

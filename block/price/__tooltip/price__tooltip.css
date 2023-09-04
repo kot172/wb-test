@@ -1,0 +1,17 @@
+.price__tooltip {
+    position: absolute;
+    top: 18px;
+    width: 239px;
+    right: 0;
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+    text-align: start;
+    transform: translate(7%, 0);
+}

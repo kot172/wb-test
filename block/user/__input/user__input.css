@@ -1,0 +1,14 @@
+.user__input {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    height: 64px;
+}
+
+@media screen and (max-width:757px) {
+    .user__input {
+        flex-direction: column;
+        height: auto;
+        gap: 8px;
+    }
+}

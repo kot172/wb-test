@@ -1,0 +1,10 @@
+.user__input-text {
+    all: unset;
+    border: none;
+    border-bottom: 1px solid #0000001A;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+}

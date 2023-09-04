@@ -1,0 +1,15 @@
+.navbar__basket-count {
+    height: 16px;
+    width: 16px;
+    background-color: #F55123;
+    color: #FFFFFF;
+    position: absolute;
+    border-radius: 16px;
+    right: 0;
+    transform: translate(30%, -30%);
+    top: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 18px;
+}

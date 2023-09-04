@@ -1,0 +1,11 @@
+.user__info {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:757px) {
+    .user__info {
+        gap: 7px;
+        max-width: 93%;
+    }
+}

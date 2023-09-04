@@ -1,0 +1,4 @@
+.card__header {
+    display: flex;
+    flex-direction: column;
+}

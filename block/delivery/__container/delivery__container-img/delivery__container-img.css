@@ -1,0 +1,5 @@
+.delivery__container-img {
+    display: flex;
+    gap: 8px;
+    position: relative;
+}

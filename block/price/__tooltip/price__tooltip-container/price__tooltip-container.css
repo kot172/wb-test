@@ -1,0 +1,5 @@
+.price__tooltip-container {
+    padding: 11px 16px 13px 16px;
+    display: flex;
+    gap: 8px;
+}

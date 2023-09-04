@@ -1,0 +1,10 @@
+.user__input-caption {
+    color: #9797AF;
+}
+
+@media screen and (max-width:757px) {
+    .user__input-caption {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
