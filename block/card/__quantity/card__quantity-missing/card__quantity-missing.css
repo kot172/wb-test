@@ -1,0 +1,5 @@
+.card__quantity-missing {
+    justify-content: end;
+    width: 98%;
+    /* max-width не забыть */
+}

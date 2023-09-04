@@ -36,6 +36,7 @@
 @import url(../block/basket/__none/basket__none.css);
 @import url(../block/basket/__input/basket__input-label/basket__input-label.css);
 @import url(../block/basket/__missing/basket__missing.css);
+@import url(../block/basket/__missing/basket__missing-header/basket__missing-header.css);
 @import url(../block/basket/__title/basket__title.css);
 @import url(../block/basket/__input/basket__input.css);
 
@@ -48,6 +49,7 @@
 @import url(../block/card/__header/card__header.css);
 @import url(../block/card/__checkbox/card__checkbox.css);
 @import url(../block/card/__quantity/card__quantity.css);
+@import url(../block/card/__quantity/card__quantity-missing/card__quantity-missing.css);
 @import url(../block/card/__author/card__author.css);
 @import url(../block/card/__left/card__left.css);
 @import url(../block/card/__left/card__left-active/card__left-active.css);
@@ -79,6 +81,7 @@
 @import url(../block/price/__tooltip/price__tooltip.css);
 @import url(../block/price/__tooltip/price__tooltip-block/price__tooltip-block.css);
 @import url(../block/price/__tooltip/price__tooltip-container/price__tooltip-container.css);
+@import url(../block/price/__tooltip/price__tooltip-gray/price__tooltip-gray.css);
 @import url(../block/price/__off/price__off.css);
 @import url(../block/price/__text/price__text-m/price__text-m.css);
 
@@ -180,6 +183,10 @@
 @import url(../block/user/__card/user__card.css);
 @import url(../block/user/__card/user__card-text/user__card-text.css);
 @import url(../block/user/__card/user__card-caption/user__card-caption.css);
+@import url(../block/user/__text/user__text.css);
+@import url(../block/user/__input/user__input-disable/user__input-disable.css);
+@import url(../block/user/__input/user__input-active/user__input-active.css);
+@import url(../block/user/__input/user__input-red/user__input-red.css);
 
 @import url(../block/navbar/navbar.css);
 @import url(../block/navbar/__basket/navbar__basket.css);
@@ -194,18 +201,3 @@
 @import url(../block/footer/footer.css);
 @import url(../block/footer/__container/footer__container.css);
 @import url(../block/footer/__caption/footer__caption.css);
-
-
-.price__tooltip-gray{
-    color: #9797AF;
-}
-
-.basket__missing-header{
-padding-bottom: 18px;
-}
-
-.card__quantity-missing {
-    justify-content: end;
-    width: 98%;
-    /* max-width не забыть */
-}

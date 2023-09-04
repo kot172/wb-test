@@ -154,7 +154,7 @@ function renderBasketCard() {
 
         basketCardContainer.appendChild(basketCardClone);
 
-        if(!cardData.cardColor) {
+        if (!cardData.cardColor) {
             cardHang.remove()
         }
     });
@@ -164,13 +164,13 @@ renderBasketCard();
 
 const allCheckbox = document.getElementById('basket__allinput') // VYNESTI
 
-allCheckbox.addEventListener('click', () =>{
+allCheckbox.addEventListener('click', () => {
     allCheckboxes()
-}) 
+})
 
 function allCheckboxes() {
     const checkbox = document.querySelectorAll('#basket__input') // VYNESTI
-    
+
     const isChecked = allCheckbox.querySelector('input[name=allInput]:checked') // VYNESTI
     checkbox.forEach((element) => {
         if (isChecked) {
@@ -178,7 +178,7 @@ function allCheckboxes() {
         } else {
             element.checked = false
         }
-        
+
     })
 }
 allCheckboxes()
@@ -283,7 +283,13 @@ const errorEmail = document.getElementById("errorEmail");
 const errorPhone = document.getElementById("errorPhone");
 const errorInn = document.getElementById("errorInn");
 const errorName = document.getElementById("errorName");
-const errorSurname = document.getElementById("errorSurname")
+const errorSurname = document.getElementById("errorSurname");
+const spanName = document.getElementById("spanName");
+const spanSurname = document.getElementById("spanSurname");
+const spanEmail = document.getElementById("spanEmail");
+const spanPhone = document.getElementById("spanPhone");
+const spanInn = document.getElementById("spanInn");
+const spanInnDown = document.getElementById("spanInnDown")
 
 function isValidSurname(surname) {
     const surnamePattern = /^[а-яА-Яa-zA-Z]+$/;
@@ -302,7 +308,7 @@ function isValidEmail(email) {
 
 // Функция для проверки валидности телефона
 function isValidPhone(phone) {
-    const phonePattern = /^\+7 \d{3} \d{3}-\d{2}-\d{2}$/;
+    const phonePattern = /^\+7 \d{3} \d{3} \d{2} \d{2}$/;
     return phonePattern.test(phone);
 }
 
@@ -312,81 +318,140 @@ function isValidInn(inn) {
     return innPattern.test(inn);
 }
 
+function allValidity() {
+
+    // Добавляем обработчики событий на потерю фокуса
+    let wasInputEntered = false;
+
+    surnameInput.addEventListener("blur", function () { 
+        spanSurname.classList.add('user__input-active')
+        if (surnameInput.value.trim() !== "") {
+            wasInputEntered = true;
+            if (!isValidSurname(surnameInput.value)) { 
+                surnameInput.classList.add('user__input-red')
+                errorSurname.textContent = "Неверный формат фамилии"; 
+            } else {
+                errorSurname.textContent = ""; 
+            } 
+        } else if (wasInputEntered) {
+            errorSurname.textContent = "Введите фамилию";
+        } else {
+            errorSurname.textContent = "";
+        }
+    });
+
+    nameInput.addEventListener("blur", function () { 
+        spanName.classList.add('user__input-active')
+        if (nameInput.value.trim() !== "") {
+            wasInputEntered = true;
+            if (!isValidName(nameInput.value)) { 
+                errorName.textContent = "Неверный формат имени";
+                nameInput.classList.add('user__input-red') 
+            } else {
+                errorName.textContent = ""; 
+            } 
+        } else if (wasInputEntered) {
+            errorName.textContent = "Укажите имя";
+        } else {
+            errorName.textContent = "";
+        }
+    });
+
+    emailInput.addEventListener("blur", function () { 
+        spanEmail.classList.add('user__input-active')
+        if (emailInput.value.trim() !== "") {
+            wasInputEntered = true;
+            if (!isValidName(emailInput.value)) { 
+                errorEmail.textContent = "Проверьте адрес электронной почты"; 
+                emailInput.classList.add('user__input-red')
+            } else {
+                errorEmail.textContent = ""; 
+            } 
+        } else if (wasInputEntered) {
+            errorEmail.textContent = "Пустое поле";
+        } else {
+            errorEmail.textContent = "";
+            emailInput.classList.remove('user__input-red')
+        }
+    });
+
+    phoneInput.addEventListener("blur", function () { 
+        spanPhone.classList.add('user__input-active')
+        if (phoneInput.value.trim() !== "") {
+            wasInputEntered = true;
+            if (!isValidName(phoneInput.value)) { 
+                errorPhone.textContent = "Формат: +9 999 999 99 99"; 
+                phoneInput.classList.add('user__input-red')
+            } else {
+                errorPhone.textContent = ""; 
+            } 
+        } else if (wasInputEntered) {
+            errorPhone.textContent = "Укажите номер телефона";
+        } else {
+            errorPhone.textContent = "";
+        }
+    });
+
+    innInput.addEventListener("blur", function () { 
+        spanInn.classList.add('user__input-active')
+        if (innInput.value.trim() !== "") {
+            wasInputEntered = true;
+            if (!isValidName(innInput.value)) { 
+                errorInn.textContent = "Проверьте ИНН"; 
+                innInput.classList.add('user__input-red')
+                spanInnDown.classList.add('user__input-disable')
+
+            } else {
+                errorInn.textContent = ""; 
+            } 
+        } else if (wasInputEntered) {
+            errorInn.textContent = "Укажите ИНН";
+        } else {
+            errorInn.textContent = "";
+        }
+    });
+
+    // Очищаем сообщения об ошибке при вводе
+    surnameInput.addEventListener("input", function () {
+        if (isValidName(surnameInput.value)) {
+            errorSurname.textContent = "";
+            surnameInput.classList.remove('user__input-red')
+        }
+    });
 
 
-// Добавляем обработчики событий на потерю фокуса
-surnameInput.addEventListener("blur", function () {
-    if (!isValidSurname(surnameInput.value)) {
-        errorSurname.textContent = "Неверный формат имя";
-    } else {
-        errorSurname.textContent = "";
-    }
-});
-
-nameInput.addEventListener("blur", function () {
-    if (!isValidName(nameInput.value)) {
-        errorName.textContent = "Неверный формат имя";
-    } else {
-        errorName.textContent = "";
-    }
-});
-
-emailInput.addEventListener("blur", function () {
-    if (!isValidEmail(emailInput.value)) {
-        errorEmail.textContent = "Неверный формат почты";
-    } else {
-        errorEmail.textContent = "";
-    }
-});
-
-phoneInput.addEventListener("blur", function () {
-    if (!isValidPhone(phoneInput.value)) {
-        errorPhone.textContent = "Неверный формат телефона";
-    } else {
-        errorPhone.textContent = "";
-    }
-});
-
-innInput.addEventListener("blur", function () {
-    if (!isValidInn(innInput.value)) {
-        errorInn.textContent = "Неверный формат ИНН";
-    } else {
-        errorInn.textContent = "";
-    }
-});
-
-// Очищаем сообщения об ошибке при вводе
-surnameInput.addEventListener("input", function () {
-    if (isValidName(surnameInput.value)) {
-        errorSurname.textContent = "";
-    }
-});
+    nameInput.addEventListener("input", function () {
+        if (isValidName(nameInput.value)) {
+            errorName.textContent = "";
+            nameInput.classList.remove('user__input-red')
+        }
+    });
 
 
-nameInput.addEventListener("input", function () {
-    if (isValidName(nameInput.value)) {
-        errorName.textContent = "";
-    }
-});
+    emailInput.addEventListener("input", function () {
+        if (isValidEmail(emailInput.value)) {
+            errorEmail.textContent = "";
+            emailInput.classList.remove('user__input-red')
+        }
+    });
 
+    phoneInput.addEventListener("input", function () {
+        if (isValidPhone(phoneInput.value)) {
+            errorPhone.textContent = "";
+            phoneInput.classList.remove('user__input-red')
+        }
+    });
 
-emailInput.addEventListener("input", function () {
-    if (isValidEmail(emailInput.value)) {
-        errorEmail.textContent = "";
-    }
-});
-
-phoneInput.addEventListener("input", function () {
-    if (isValidPhone(phoneInput.value)) {
-        errorPhone.textContent = "";
-    }
-});
-
-innInput.addEventListener("input", function () {
-    if (isValidInn(innInput.value)) {
-        errorInn.textContent = "";
-    }
-});
+    innInput.addEventListener("input", function () {
+        if (isValidInn(innInput.value)) {
+            errorInn.textContent = "";
+            innInput.classList.remove('user__input-red')
+        }
+    });
+}
+orderBtn.addEventListener('click', () =>
+    allValidity()
+)
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -403,8 +468,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const priceDisplaySmall = card.querySelector('#price__new-m');
         const originalPrice = priceDisplay.textContent;
         const originalOldPrice = priceOldDisplay.textContent;
-      
-        
+
+
 
         // считаем итоговую сумму
         let count = parseInt(countDisplay.textContent, 10);
@@ -495,7 +560,7 @@ const getTotalSum = () => {
             );
             const count = parseInt(
                 val.querySelector(".card__count-number").textContent.replace(/\s/g, "")
-            ); 
+            );
             return acc + price * count;
         }
         return acc;
@@ -579,8 +644,8 @@ function renderDeliveryImages() {
                 const countSpanSlow = newImgSlow.querySelector('.card__count-span'); // находим элемент span в клонированном изображении
                 countSpanSlow.textContent = Number(cardCount.textContent) - 184; // вычитаем 184 из значения счетчика
                 deliverySlow.appendChild(newImgSlow);
-                 containerBlock.classList.remove('delivery__container-disable')
-                 containerBlock.classList.add('TEST')
+                containerBlock.classList.remove('delivery__container-disable')
+                containerBlock.classList.add('TEST')
             } else {
                 containerBlock.classList.remove('TEST')
             }
