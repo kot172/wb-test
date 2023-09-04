@@ -1,8 +1,8 @@
 .user__input {
     display: flex;
     justify-content: space-between;
-    gap: 16px;
-    height: 64px;
+    gap: 20px;
+    height: 62px;
 }
 
 @media screen and (max-width:757px) {

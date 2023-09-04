@@ -1,4 +1,9 @@
 .formalization__container {
     background-color: #FFFFFF;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 891px;
 }

@@ -2,4 +2,6 @@
     display: flex;
     gap: 8px;
     position: relative;
+    margin-left: 6px;
+    margin-top: -3px;
 }

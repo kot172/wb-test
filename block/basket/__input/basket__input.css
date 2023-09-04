@@ -1,9 +1,8 @@
 .basket__input {
-   
     margin: auto;
     cursor: pointer;
-    /* background-color: #CB11AB; */
-    /* display: none; */
+    background-color: #CB11AB;
+    display: none;
 }
 
 .custom__checkbox .checkmark {

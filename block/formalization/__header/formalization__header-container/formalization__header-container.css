@@ -1,8 +1,6 @@
 .formalization__header-container {
     display: flex;
     justify-content: space-between;
-    width: 94%;
-    margin-left: 24px;
 }
 
 @media screen and (max-width: 757px) {
