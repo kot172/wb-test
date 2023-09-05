@@ -10,7 +10,7 @@
     height: 22px;
     display: inline-block;
     /* border: 1px solid black; */
-    background-image: url(../../../images/checkboxDslb.png);
+    background-image: url(../../../images/checkboxDslb.svg);
 }
 
 .custom__checkbox .checkmark::before{
@@ -24,6 +24,7 @@
     font-size: 16px;
     color: #fff;
     opacity: 0;
+    cursor: pointer;
 }
 
 .custom__checkbox input[type="checkbox"]:checked + .checkmark {
