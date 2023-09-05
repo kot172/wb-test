@@ -23,7 +23,7 @@
 
     .header::after{
     height: 23px;
-    bottom: 0px;
+    bottom: -1px;
     }
 }
 

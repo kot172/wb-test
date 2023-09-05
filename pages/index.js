@@ -68,7 +68,6 @@ const cardsData = [
     },
 ];
 
-
 //Функции переворачивание стрелочки
 function rotateGoods() {
     disableBtngoods.classList.toggle("basket__disable-active");
@@ -487,14 +486,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const originalOldPrice = priceOldDisplay.textContent;
 
 
-
         // считаем итоговую сумму
         let count = parseInt(countDisplay.textContent, 10);
         sumPrice = count * originalPrice;
         priceDisplay.textContent = sumPrice.toLocaleString();
+        priceDisplaySmall.textContent = sumPrice.toLocaleString();//
         sumOld = count * originalOldPrice;
         priceOldDisplay.textContent = sumOld.toLocaleString() + ' сом';
         priceOldDisplaySmall.textContent = sumOld.toLocaleString() + ' сом';
+
 
         const countMax = parseInt(countMaxDisplay.textContent, 10);
 
@@ -518,6 +518,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 countDisplay.textContent = count;
                 price = (count * originalPrice);
                 priceDisplay.textContent = Math.round(price).toLocaleString();
+                priceDisplaySmall.textContent = Math.round(price).toLocaleString(); //
                 priceOld = (count * originalOldPrice)
                 priceOldDisplay.textContent = Math.round(priceOld).toLocaleString() + ' сом';
                 priceOldDisplaySmall.textContent = Math.round(priceOld).toLocaleString() + ' сом';
@@ -536,6 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 countDisplay.textContent = count;
                 price = (count * originalPrice);
                 priceDisplay.textContent = Math.round(price).toLocaleString();
+                priceDisplaySmall.textContent = Math.round(price).toLocaleString(); //
                 priceOld = (count * originalOldPrice)
                 priceOldDisplay.textContent = Math.round(priceOld).toLocaleString() + ' сом';
                 priceOldDisplaySmall.textContent = Math.round(priceOld).toLocaleString() + ' сом';
@@ -551,7 +553,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
 
 
 const checkbox = document.querySelectorAll("input[name=basket__input]");
@@ -573,21 +574,20 @@ const getTotalSum = () => {
         const isChecked = val.querySelector('input[name=basket__input]:checked')
         if (isChecked) {
             const price = parseFloat(
-                val.querySelector(".price__new-sum").textContent.replace(/\s/g, "")
+                val.querySelector("#price__new-m").textContent.replace(/\s/g, "")
             );
             const count = parseInt(
                 val.querySelector(".card__count-number").textContent.replace(/\s/g, "")
-            );
-            return acc + price * count;
+             ); return acc + price;
         }
         return acc;
-    }, 0);
+    }, 0); 
     const orderPriceElement = document.getElementById("order__price");
     const formattedSum = Math.round(totalValue).toLocaleString();
     orderPriceElement.textContent = formattedSum;
 };
+setTimeout(getTotalSum, 50)
 
-getTotalSum()
 
 //Функиця подсчёта скидки
 const getTotalSale = () => {
@@ -606,7 +606,7 @@ const getTotalSale = () => {
     }, 0);
     const orderPriceSaleElement = document.getElementById("order__sale");
     const formattedSaleSum = totalSaleValue.toLocaleString();
-    orderPriceSaleElement.textContent = formattedSaleSum + ' com2';
+    orderPriceSaleElement.textContent = formattedSaleSum + ' com';
 };
 
 function totalSale() {
@@ -621,7 +621,7 @@ function totalSale() {
     let totalSale = totalSaleprice.toLocaleString();
     saleBlock.textContent = '− ' + totalSale + ' сом'
 }
-totalSale()
+setTimeout(totalSale,50)
 
 // Функция рендера карточке в блок доставки
 function renderDeliveryImages() {
@@ -668,9 +668,6 @@ checkboxes.forEach((checkbox) => {
     checkbox.addEventListener('change', renderDeliveryImages);
 });
 renderDeliveryImages();
-
-
-
 
 // Получаем элементы попапа
 const popup = document.getElementById('popupPay');
