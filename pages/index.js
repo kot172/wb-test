@@ -1,72 +1,57 @@
-const disableBtngoods = document.getElementById("basket__off-goods");
-const disableBtnMissing = document.getElementById("basket__off-missing");
-const basketGoods = document.getElementById("basket__card-goods");
-const basketMissing = document.getElementById("basket__card-missing");
-
-const orderInput = document.getElementById("order__input"); //получили чекбокс
-const orderBtn = document.getElementById("order__button"); // нашли кнопку
-const orderPrice = document.getElementById("order__price"); //нашли итоговую сумму
-
-const basketCheckbox = document.getElementById("basket__allinput"); //нашли чекбокс
-const checkboxes = document.querySelectorAll('#basket__input');
-const basketCount = document.getElementById("basket__count"); //нашли итог товаров и суммы
-
-const basketCardContainer = document.getElementById("basket__card-goods");
-const basketCardTemplate = document.getElementById("basket__card");// VYNESTI
-const cardContainer = document.getElementById("basket__card-missing");
-const cardTemplate = document.getElementById("card-template");
-const allCheckbox = document.getElementById('basket__allinput') //Инпуты в карточках
-
-const cardsData = [
-    {
-        cardTitle: "Футболка UZcotton мужская",
-        cardParams: "Размер: 56",
-        cardParamsMissing: "56",
-        cardColor: "Цвет: белый",
-        cardFrom: "Коледино WB",
-        cardAuthor: "OOO Вайлдберриз",
-        ogrn: "ОГРН: 1067746062449",
-        adress: "142181, Московская обл, г.о. Подольск, д Коледино, тер. Индустриальный парк Коледино, д. 6, стр. 1",
-        img: "./images/img-1.png",
-        cardPrice: "522",
-        CardPriceOld: "1051",
-        count: '1',
-        maxCount: '3',
-    },
-
-    {
-        cardTitle:
-            "Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe",
-        cardParams: "",
-        cardParamsMissing: "",
-        cardColor: "Цвет: прозрачный",
-        cardFrom: "Коледино WB",
-        cardAuthor: "OOO Мегапрофстиль",
-        ogrn: "ОГРН: 5167746237148",
-        adress: "129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34",
-        img: "./images/img-2.png",
-        cardPrice: "10500.235",
-        CardPriceOld: "11500.235",
-        count: '200',
-        maxCount: '210',
-    },
-
-    {
-        cardTitle:
-            'Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell ',
-        cardParams: "",
-        cardParamsMissing: "56/54/52...",
-        cardFrom: "Коледино WB",
-        cardAuthor: "OOO Вайлдберриз",
-        ogrn: "ОГРН: 1067746062449",
-        adress: "142181, Московская обл, г.о. Подольск, д Коледино, тер. Индустриальный парк Коледино, д. 6, стр. 1",
-        img: "./images/img-3.png",
-        cardPrice: "247",
-        CardPriceOld: "475",
-        count: '2',
-        maxCount: '4',
-    },
-];
+import {
+    cardsData,
+    disableBtngoods,
+disableBtnMissing,
+basketGoods,
+basketMissing,
+orderInput,
+orderBtn,
+orderPrice,
+basketCheckbox,
+checkboxes,
+basketCount,
+basketCardContainer,
+basketCardTemplate,
+cardContainer,
+cardTemplate,
+allCheckbox,
+orderCaption,
+emailInput,
+phoneInput,
+innInput,
+nameInput,
+surnameInput,
+errorEmail,
+errorPhone,
+errorInn,
+errorName,
+errorSurname,
+spanName,
+spanSurname,
+spanEmail,
+spanPhone,
+spanInn,
+spanInnDown,
+popup,
+checkboxesPopup,
+confirmButton,
+userCard,
+userCardImage,
+userCardText,
+userOrderCard,
+userOrderImage,
+userOrderText,
+checkboxesDelivery,
+confirmButtonPoint,
+confirmButtonCourier,
+deliveryText,
+deliveryCaption,
+deliveryName,
+orderTextAdress,
+orderName,
+orderDate,
+checkboxesCourier,
+} from "../scripts/constants.js"
 
 //Функции переворачивание стрелочки
 function rotateGoods() {
@@ -79,11 +64,11 @@ function rotateMissing() {
 
 //Функции открытия и закрытия корзин
 function handleGoods() {
-    basketGoods.classList.toggle("active");
+    basketGoods.classList.toggle("card__disable");
 }
 
 function handleMissing() {
-    basketMissing.classList.toggle("active");
+    basketMissing.classList.toggle("card__disable");
 }
 
 function handleBasketInfo() {
@@ -125,10 +110,11 @@ function renderCards() {
 }
 renderCards();
 
-//Рендерим актуальную карзину
+//Рендерим актуальную корзину
 function renderBasketCard() {
     cardsData.forEach((cardData) => {
         const basketCardClone = basketCardTemplate.content.cloneNode(true);
+        const card = basketCardClone.getElementById('card')
         const cardTitle = basketCardClone.getElementById("card__title");
         const cardParams = basketCardClone.getElementById("card__params");
         const cardParamsImg = basketCardClone.getElementById("card__paramsImg");
@@ -146,6 +132,7 @@ function renderBasketCard() {
         const cardOgrn = basketCardClone.querySelector('.card__tooltip-ogrn');
         const cardAdress = basketCardClone.querySelector('.card__tooltip-adress')
 
+        card.classList.add('active-card');
         cardTitle.textContent = cardData.cardTitle;
         cardParams.textContent = cardData.cardParams;
         cardParamsImg.textContent = cardData.cardParams.replace(/[^0-9]/g, "");
@@ -184,7 +171,7 @@ allCheckbox.addEventListener('click', () => {
 function allCheckboxes() {
     const checkbox = document.querySelectorAll('#basket__input') 
     const isChecked = allCheckbox.querySelector('input[name=allInput]:checked') 
-    
+
     checkbox.forEach((element) => {
         if (isChecked) {
             element.checked = true
@@ -196,16 +183,12 @@ function allCheckboxes() {
 }
 allCheckboxes()
 
-
-
-const orderCaption = document.querySelector('.order__input-caption')
-
 //функция, которая меняет текст заказать на сумму
 function changeButtonText() {
     // Проверяем состояние чекбокса
     if (orderInput.checked) {
         // Если чекбокс отмечен, меняем текст кнопки на "Выключить"
-        orderBtn.textContent = orderPrice.textContent + ' сом';
+        orderBtn.textContent = 'Оплатить ' + orderPrice.textContent + ' сом';
         orderCaption.style.display = "none";
     } else {
         // Если чекбокс не отмечен, меняем текст кнопки на "Включить"
@@ -213,15 +196,7 @@ function changeButtonText() {
         orderCaption.style.display = "block";
     }
 }
-
-const priceElement = document.querySelectorAll(".price__new-sum");
-
-priceElement.forEach((element) => {
-    if (element.textContent.length > 6) {
-        element.classList.toggle("price__text-m");
-    } else return;
-});
-
+orderInput.addEventListener('click', () => changeButtonText());
 
 
 // Оживляем попапы
@@ -286,26 +261,7 @@ btnChoiceCourier.addEventListener("click", () => switchCorier());
 
 btnChoicePoint.addEventListener("click", () => switchPoint());
 
-
-
-// Получаем элементы ввода и сообщения об ошибке
-const emailInput = document.getElementById("inputEmail");
-const phoneInput = document.getElementById("inputPhone");
-const innInput = document.getElementById("inputInn");
-const nameInput = document.getElementById("inputName");
-const surnameInput = document.getElementById("inputSurname");
-const errorEmail = document.getElementById("errorEmail");
-const errorPhone = document.getElementById("errorPhone");
-const errorInn = document.getElementById("errorInn");
-const errorName = document.getElementById("errorName");
-const errorSurname = document.getElementById("errorSurname");
-const spanName = document.getElementById("spanName");
-const spanSurname = document.getElementById("spanSurname");
-const spanEmail = document.getElementById("spanEmail");
-const spanPhone = document.getElementById("spanPhone");
-const spanInn = document.getElementById("spanInn");
-const spanInnDown = document.getElementById("spanInnDown")
-
+//Функции валидации, делаем условия
 function isValidSurname(surname) {
     const surnamePattern = /^[а-яА-Яa-zA-Z]+$/;
     return surnamePattern.test(surname)
@@ -321,13 +277,13 @@ function isValidEmail(email) {
     return emailPattern.test(email);
 }
 
-// Функция для проверки валидности телефона
+
 function isValidPhone(phone) {
     const phonePattern = /^\+7 \d{3} \d{3} \d{2} \d{2}$/;
     return phonePattern.test(phone);
 }
 
-// Функция для проверки валидности ИНН
+
 function isValidInn(inn) {
     const innPattern = /^\d{10}$/;
     return innPattern.test(inn);
@@ -470,7 +426,7 @@ orderBtn.addEventListener('click', () =>
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.active-card');
 
     cards.forEach(card => {
         const decrementBtn = card.querySelector('#decrement__btn');
@@ -487,10 +443,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // считаем итоговую сумму
         let count = parseInt(countDisplay.textContent, 10);
-        sumPrice = (count * originalPrice);
+        const sumPrice = (count * originalPrice);
         priceDisplay.textContent = sumPrice.toLocaleString();
         priceDisplaySmall.textContent = sumPrice.toLocaleString();//
-        sumOld = count * originalOldPrice;
+        const sumOld = count * originalOldPrice;
         priceOldDisplay.textContent = sumOld.toLocaleString() + ' сом';
         priceOldDisplaySmall.textContent = sumOld.toLocaleString() + ' сом';
 
@@ -515,10 +471,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (count > 0) {
                 count--;
                 countDisplay.textContent = count;
-                price = (count * originalPrice);
+                const price = (count * originalPrice);
                 priceDisplay.textContent = Math.round(price).toLocaleString();
                 priceDisplaySmall.textContent = Math.round(price).toLocaleString(); //
-                priceOld = (count * originalOldPrice)
+                const priceOld = (count * originalOldPrice)
                 priceOldDisplay.textContent = Math.round(priceOld).toLocaleString() + ' сом';
                 priceOldDisplaySmall.textContent = Math.round(priceOld).toLocaleString() + ' сом';
                 getTotalSum();
@@ -527,6 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 changeButtonText();
                 countCaption();
                 renderDeliveryImages();
+                priceSize();
             }
         });
         incrementBtn.addEventListener('click', () => {
@@ -534,10 +491,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (count < countMax) {
                 count++;
                 countDisplay.textContent = count;
-                price = (count * originalPrice);
+                const price = (count * originalPrice);
                 priceDisplay.textContent = Math.round(price).toLocaleString();
                 priceDisplaySmall.textContent = Math.round(price).toLocaleString(); //
-                priceOld = (count * originalOldPrice)
+                const priceOld = (count * originalOldPrice)
                 priceOldDisplay.textContent = Math.round(priceOld).toLocaleString() + ' сом';
                 priceOldDisplaySmall.textContent = Math.round(priceOld).toLocaleString() + ' сом';
                 getTotalSum();
@@ -546,6 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 changeButtonText();
                 countCaption();
                 renderDeliveryImages();
+                priceSize();
             }
             else {
             }
@@ -622,6 +580,19 @@ function totalSale() {
 }
 setTimeout(totalSale, 50)
 
+//Меняем шрифт у суммы, если кол-во символов больше 6
+function priceSize() {
+    const priceElement = document.querySelectorAll(".price__new-sum");//Сумма товара
+    priceElement.forEach((element) => {
+        if (element.textContent.length > 6) {
+            element.classList.add("price__text-m");
+        } else {
+            element.classList.remove("price__text-m");
+        };
+    });
+}
+priceSize()
+  
 // Функция рендера карточке в блок доставки
 function renderDeliveryImages() {
     const card = document.querySelectorAll('.card');
@@ -668,18 +639,7 @@ checkboxes.forEach((checkbox) => {
 });
 renderDeliveryImages();
 
-// Получаем элементы попапа
-const popup = document.getElementById('popupPay');
-const checkboxesPopup = popup.querySelectorAll('.popup__card-checkbox');
-const confirmButton = popup.querySelector('.popup__button');
 
-// Получаем элемент для вывода картинки и текста
-const userCard = document.querySelector('.user__card');
-const userCardImage = userCard.querySelector('img');
-const userCardText = userCard.querySelector('span');
-const userOrderCard = document.querySelector('.order__card')
-const userOrderImage = userOrderCard.querySelector('img')
-const userOrderText = userOrderCard.querySelector('p')
 
 // Обработчик события для кнопки "Выбрать"
 confirmButton.addEventListener('click', () => {
@@ -714,16 +674,7 @@ checkboxesPopup.forEach(checkbox => {
 });
 
 
-// Получаем элементы для вставки блока содержимого
-const checkboxesDelivery = popupDelivery.querySelectorAll('.popup__card-checkbox');
-const confirmButtonPoint = popupDelivery.querySelector('#btnPoint');
-const confirmButtonCourier = popupDelivery.querySelector('#btnCourier')
-const deliveryText = document.querySelector('.delivery__text-l');
-const deliveryCaption = document.querySelector('.delivery__text-s');
-const deliveryName = document.getElementById('deliveryMethod');
-const orderTextAdress = document.getElementById('orderText');
-const orderName = document.getElementById('orderName');
-const orderDate = document.getElementById('orderDate')
+
 
 // Обработчик события для кнопки "Выбрать"
 confirmButtonPoint.addEventListener('click', () => {
@@ -755,8 +706,7 @@ checkboxesDelivery.forEach(checkbox => {
     });
 });
 
-// курьером
-const checkboxesCourier = popupDelivery.querySelectorAll('#popupDeliveryInput');
+
 
 // Обработчик события для кнопки "Выбрать"
 confirmButtonCourier.addEventListener('click', () => {

@@ -62,19 +62,57 @@ const basketCheckbox = document.getElementById("basket__allinput"); //нашли
 const checkboxes = document.querySelectorAll('#basket__input');
 const basketCount = document.getElementById("basket__count"); //нашли итог товаров и суммы
 
-const basketCardContainer = document.getElementById("basket__card-goods");
-const basketCardTemplate = document.getElementById("basket__card");
-const cardContainer = document.getElementById("basket__card-missing");
-const cardTemplate = document.getElementById("card-template");
+const basketCardContainer = document.getElementById("basket__card-goods");//карты для темплейта
+const basketCardTemplate = document.getElementById("basket__card");// Темплейт
+const cardContainer = document.getElementById("basket__card-missing");// карты для темплейта(остутствуют)
+const cardTemplate = document.getElementById("card-template");//Темплейт (отсутствую)
 const allCheckbox = document.getElementById('basket__allinput') //Инпуты в карточках
 
+const orderCaption = document.querySelector('.order__input-caption')//подпись под чекбоксом в (order)
+
+// Получаем элементы ввода и сообщения об ошибке
+const emailInput = document.getElementById("inputEmail");
+const phoneInput = document.getElementById("inputPhone");
+const innInput = document.getElementById("inputInn");
+const nameInput = document.getElementById("inputName");
+const surnameInput = document.getElementById("inputSurname");
+const errorEmail = document.getElementById("errorEmail");
+const errorPhone = document.getElementById("errorPhone");
+const errorInn = document.getElementById("errorInn");
+const errorName = document.getElementById("errorName");
+const errorSurname = document.getElementById("errorSurname");
+const spanName = document.getElementById("spanName");
+const spanSurname = document.getElementById("spanSurname");
+const spanEmail = document.getElementById("spanEmail");
+const spanPhone = document.getElementById("spanPhone");
+const spanInn = document.getElementById("spanInn");
+const spanInnDown = document.getElementById("spanInnDown")
+
+// Получаем элементы попапа
+const popup = document.getElementById('popupPay');
+const checkboxesPopup = popup.querySelectorAll('.popup__card-checkbox');// чекбоксы доставки
+const confirmButton = popup.querySelector('.popup__button');
+const checkboxesCourier = popupDelivery.querySelectorAll('#popupDeliveryInput');// чекбоксы курьера
+
+// Получаем элемент для вывода картинки и текста
+const userCard = document.querySelector('.user__card');
+const userCardImage = userCard.querySelector('img');
+const userCardText = userCard.querySelector('span');
+const userOrderCard = document.querySelector('.order__card')
+const userOrderImage = userOrderCard.querySelector('img')
+const userOrderText = userOrderCard.querySelector('p')
 
 
-
-
-
-
-
+// Получаем элементы для вставки блока содержимого
+const checkboxesDelivery = popupDelivery.querySelectorAll('.popup__card-checkbox');
+const confirmButtonPoint = popupDelivery.querySelector('#btnPoint');
+const confirmButtonCourier = popupDelivery.querySelector('#btnCourier')
+const deliveryText = document.querySelector('.delivery__text-l');
+const deliveryCaption = document.querySelector('.delivery__text-s');
+const deliveryName = document.getElementById('deliveryMethod');
+const orderTextAdress = document.getElementById('orderText');
+const orderName = document.getElementById('orderName');
+const orderDate = document.getElementById('orderDate');
 
 
 
@@ -95,4 +133,42 @@ basketCardTemplate,
 cardContainer,
 cardTemplate,
 allCheckbox,
+orderCaption,
+// priceElement,
+emailInput,
+phoneInput,
+innInput,
+nameInput,
+surnameInput,
+errorEmail,
+errorPhone,
+errorInn,
+errorName,
+errorSurname,
+spanName,
+spanSurname,
+spanEmail,
+spanPhone,
+spanInn,
+spanInnDown,
+popup,
+checkboxesPopup,
+confirmButton,
+userCard,
+userCardImage,
+userCardText,
+userOrderCard,
+userOrderImage,
+userOrderText,
+checkboxesDelivery,
+confirmButtonPoint,
+confirmButtonCourier,
+deliveryText,
+deliveryCaption,
+deliveryName,
+orderTextAdress,
+orderName,
+orderDate,
+checkboxesCourier,
+
 };
