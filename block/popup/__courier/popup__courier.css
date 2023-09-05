@@ -1,6 +1,6 @@
 .popup__courier{
     flex-direction: column;
-    gap: 8px;
+    gap: 14px;
     margin-left: 4px;
     display: none;
 }

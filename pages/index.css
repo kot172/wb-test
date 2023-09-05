@@ -176,6 +176,7 @@
 @import url(../block/popup/__info/popup__info-gray/popup__info-gray.css);
 @import url(../block/popup/__name/popup__name.css);
 @import url(../block/popup/__pay/popup__pay.css);
+@import url(../block/popup/__pay/popup__pay-block/popup__pay-block.css);
 @import url(../block/popup/__point/popup__point.css);
 @import url(../block/popup/__text/popup__text.css);
 @import url(../block/popup/__visible/popup__visible.css);

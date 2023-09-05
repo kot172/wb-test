@@ -123,7 +123,6 @@ function renderCards() {
         cardContainer.appendChild(cardClone);
     });
 }
-
 renderCards();
 
 //Рендерим актуальную карзину
@@ -177,15 +176,15 @@ function renderBasketCard() {
 }
 renderBasketCard();
 
-
+// Устанавливаем слушатель на чекбоксы
 allCheckbox.addEventListener('click', () => {
     allCheckboxes()
 })
 
 function allCheckboxes() {
-    const checkbox = document.querySelectorAll('#basket__input') // VYNESTI
-
-    const isChecked = allCheckbox.querySelector('input[name=allInput]:checked') // VYNESTI
+    const checkbox = document.querySelectorAll('#basket__input') 
+    const isChecked = allCheckbox.querySelector('input[name=allInput]:checked') 
+    
     checkbox.forEach((element) => {
         if (isChecked) {
             element.checked = true
@@ -488,7 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // считаем итоговую сумму
         let count = parseInt(countDisplay.textContent, 10);
-        sumPrice = count * originalPrice;
+        sumPrice = (count * originalPrice);
         priceDisplay.textContent = sumPrice.toLocaleString();
         priceDisplaySmall.textContent = sumPrice.toLocaleString();//
         sumOld = count * originalOldPrice;
@@ -578,10 +577,10 @@ const getTotalSum = () => {
             );
             const count = parseInt(
                 val.querySelector(".card__count-number").textContent.replace(/\s/g, "")
-             ); return acc + price;
+            ); return acc + price;
         }
         return acc;
-    }, 0); 
+    }, 0);
     const orderPriceElement = document.getElementById("order__price");
     const formattedSum = Math.round(totalValue).toLocaleString();
     orderPriceElement.textContent = formattedSum;
@@ -621,7 +620,7 @@ function totalSale() {
     let totalSale = totalSaleprice.toLocaleString();
     saleBlock.textContent = '− ' + totalSale + ' сом'
 }
-setTimeout(totalSale,50)
+setTimeout(totalSale, 50)
 
 // Функция рендера карточке в блок доставки
 function renderDeliveryImages() {
@@ -788,4 +787,3 @@ checkboxesCourier.forEach(checkbox => {
         checkbox.checked = true;
     });
 });
-
