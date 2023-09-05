@@ -6,3 +6,10 @@
     height: 267px;
     margin-left: 22px;
 }
+
+@media screen and (max-width: 757px) {
+    .popup__card{
+        height: 424px;
+        margin-left:0;
+    }
+}

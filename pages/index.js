@@ -757,7 +757,7 @@ checkboxesDelivery.forEach(checkbox => {
 });
 
 // курьером
-const checkboxesCourier = popupDelivery.querySelectorAll('.popup__card-checkboxCourier');
+const checkboxesCourier = popupDelivery.querySelectorAll('#popupDeliveryInput');
 
 // Обработчик события для кнопки "Выбрать"
 confirmButtonCourier.addEventListener('click', () => {

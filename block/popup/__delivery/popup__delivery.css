@@ -1,5 +1,13 @@
-.popup__delivery{
+.popup__delivery {
     width: 500px;
     height: 408px;
     border-radius: 16px;
+}
+
+@media screen and (max-width:757px) {
+    .popup__delivery {
+        width: 320px;
+        height: 594px;
+        border-radius: 0px;
+    }
 }

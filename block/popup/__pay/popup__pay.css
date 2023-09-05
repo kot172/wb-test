@@ -3,3 +3,11 @@
     border-radius: 16px;
     height: 408px;
 }
+
+@media screen and (max-width: 757px) {
+    .popup__pay{
+        width: 320px;
+        border-radius: 0px;
+        height: 549px;
+    }
+}
