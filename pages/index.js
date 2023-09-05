@@ -11,6 +11,12 @@ const basketCheckbox = document.getElementById("basket__allinput"); //нашли
 const checkboxes = document.querySelectorAll('#basket__input');
 const basketCount = document.getElementById("basket__count"); //нашли итог товаров и суммы
 
+const basketCardContainer = document.getElementById("basket__card-goods");
+const basketCardTemplate = document.getElementById("basket__card");// VYNESTI
+const cardContainer = document.getElementById("basket__card-missing");
+const cardTemplate = document.getElementById("card-template");
+const allCheckbox = document.getElementById('basket__allinput') //Инпуты в карточках
+
 const cardsData = [
     {
         cardTitle: "Футболка UZcotton мужская",
@@ -63,10 +69,6 @@ const cardsData = [
 ];
 
 
-
-
-
-
 //Функции переворачивание стрелочки
 function rotateGoods() {
     disableBtngoods.classList.toggle("basket__disable-active");
@@ -102,11 +104,8 @@ disableBtngoods.addEventListener("click", () => {
     handleBasketInfo();
 });
 
-
+//рендерим корзину "отсутсвуют"
 function renderCards() {
-    const cardContainer = document.getElementById("basket__card-missing");
-    const cardTemplate = document.getElementById("card-template");
-
     cardsData.forEach((cardData) => {
         const cardClone = cardTemplate.content.cloneNode(true);
         const cardTitle = cardClone.getElementById("card__title");
@@ -128,11 +127,8 @@ function renderCards() {
 
 renderCards();
 
-//корзина
+//Рендерим актуальную карзину
 function renderBasketCard() {
-    const basketCardContainer = document.getElementById("basket__card-goods");
-    const basketCardTemplate = document.getElementById("basket__card");// VYNESTI
-
     cardsData.forEach((cardData) => {
         const basketCardClone = basketCardTemplate.content.cloneNode(true);
         const cardTitle = basketCardClone.getElementById("card__title");
@@ -167,7 +163,6 @@ function renderBasketCard() {
         cardOrganization.textContent = cardData.cardAuthor.toLocaleUpperCase();
         cardOgrn.textContent = cardData.ogrn;
         cardAdress.textContent = cardData.adress;
- 
 
         basketCardContainer.appendChild(basketCardClone);
 
@@ -181,10 +176,8 @@ function renderBasketCard() {
         }
     });
 }
-
 renderBasketCard();
 
-const allCheckbox = document.getElementById('basket__allinput') // VYNESTI
 
 allCheckbox.addEventListener('click', () => {
     allCheckboxes()
@@ -347,16 +340,16 @@ function allValidity() {
     // Добавляем обработчики событий на потерю фокуса
     let wasInputEntered = false;
 
-    surnameInput.addEventListener("blur", function () { 
+    surnameInput.addEventListener("blur", function () {
         spanSurname.classList.add('user__input-active')
         if (surnameInput.value.trim() !== "") {
             wasInputEntered = true;
-            if (!isValidSurname(surnameInput.value)) { 
+            if (!isValidSurname(surnameInput.value)) {
                 surnameInput.classList.add('user__input-red')
-                errorSurname.textContent = "Неверный формат фамилии"; 
+                errorSurname.textContent = "Неверный формат фамилии";
             } else {
-                errorSurname.textContent = ""; 
-            } 
+                errorSurname.textContent = "";
+            }
         } else if (wasInputEntered) {
             errorSurname.textContent = "Введите фамилию";
         } else {
@@ -364,16 +357,16 @@ function allValidity() {
         }
     });
 
-    nameInput.addEventListener("blur", function () { 
+    nameInput.addEventListener("blur", function () {
         spanName.classList.add('user__input-active')
         if (nameInput.value.trim() !== "") {
             wasInputEntered = true;
-            if (!isValidName(nameInput.value)) { 
+            if (!isValidName(nameInput.value)) {
                 errorName.textContent = "Неверный формат имени";
-                nameInput.classList.add('user__input-red') 
+                nameInput.classList.add('user__input-red')
             } else {
-                errorName.textContent = ""; 
-            } 
+                errorName.textContent = "";
+            }
         } else if (wasInputEntered) {
             errorName.textContent = "Укажите имя";
         } else {
@@ -381,16 +374,16 @@ function allValidity() {
         }
     });
 
-    emailInput.addEventListener("blur", function () { 
+    emailInput.addEventListener("blur", function () {
         spanEmail.classList.add('user__input-active')
         if (emailInput.value.trim() !== "") {
             wasInputEntered = true;
-            if (!isValidName(emailInput.value)) { 
-                errorEmail.textContent = "Проверьте адрес электронной почты"; 
+            if (!isValidName(emailInput.value)) {
+                errorEmail.textContent = "Проверьте адрес электронной почты";
                 emailInput.classList.add('user__input-red')
             } else {
-                errorEmail.textContent = ""; 
-            } 
+                errorEmail.textContent = "";
+            }
         } else if (wasInputEntered) {
             errorEmail.textContent = "Пустое поле";
         } else {
@@ -399,16 +392,16 @@ function allValidity() {
         }
     });
 
-    phoneInput.addEventListener("blur", function () { 
+    phoneInput.addEventListener("blur", function () {
         spanPhone.classList.add('user__input-active')
         if (phoneInput.value.trim() !== "") {
             wasInputEntered = true;
-            if (!isValidName(phoneInput.value)) { 
-                errorPhone.textContent = "Формат: +9 999 999 99 99"; 
+            if (!isValidName(phoneInput.value)) {
+                errorPhone.textContent = "Формат: +9 999 999 99 99";
                 phoneInput.classList.add('user__input-red')
             } else {
-                errorPhone.textContent = ""; 
-            } 
+                errorPhone.textContent = "";
+            }
         } else if (wasInputEntered) {
             errorPhone.textContent = "Укажите номер телефона";
         } else {
@@ -416,18 +409,18 @@ function allValidity() {
         }
     });
 
-    innInput.addEventListener("blur", function () { 
+    innInput.addEventListener("blur", function () {
         spanInn.classList.add('user__input-active')
         if (innInput.value.trim() !== "") {
             wasInputEntered = true;
-            if (!isValidName(innInput.value)) { 
-                errorInn.textContent = "Проверьте ИНН"; 
+            if (!isValidName(innInput.value)) {
+                errorInn.textContent = "Проверьте ИНН";
                 innInput.classList.add('user__input-red')
                 spanInnDown.classList.add('user__input-disable')
 
             } else {
-                errorInn.textContent = ""; 
-            } 
+                errorInn.textContent = "";
+            }
         } else if (wasInputEntered) {
             errorInn.textContent = "Укажите ИНН";
         } else {
@@ -632,12 +625,12 @@ totalSale()
 
 // Функция рендера карточке в блок доставки
 function renderDeliveryImages() {
-    const card = document.querySelectorAll('.card'); 
+    const card = document.querySelectorAll('.card');
     const delivery = document.querySelector('#imgDelivery'); // Блок доставки 5-6 февраля
     const deliverySlow = document.querySelector('#imgDeliverySlow'); // Блок доставки 7-8 февраля
-    const containerBlock = document.getElementById('containerBlock'); 
+    const containerBlock = document.getElementById('containerBlock');
 
-// Чистим содержимое
+    // Чистим содержимое
     delivery.innerHTML = '';
     deliverySlow.innerHTML = '';
 
@@ -666,7 +659,7 @@ function renderDeliveryImages() {
                 countSpanSlow.textContent = Number(cardCount.textContent) - 184; // вычитаем 184 из значения счетчика
                 deliverySlow.appendChild(newImgSlow);
                 containerBlock.classList.remove('delivery__container-disable');
-            } 
+            }
         }
     });
 }
