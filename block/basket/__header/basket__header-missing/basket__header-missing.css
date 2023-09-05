@@ -4,3 +4,16 @@
     line-height: 24px;
     margin: 0;
 }
+
+@media screen and (max-width: 1024px) {
+    .basket__header-missing{
+        margin-left: 15px;
+        width: 97%;
+    }
+}
+
+@media screen and (max-width: 757px) {
+    .basket__header-missing{
+        margin-left: 0px;
+    }
+}

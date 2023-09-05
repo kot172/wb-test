@@ -12,11 +12,12 @@
     height: 43px;
     border-radius: 0 0 24px 24px;
     position: absolute;
-    top: -1px;
+    top: -4px;
 }
 
 @media screen and (max-width: 757px) {
     .footer::after{
-        top:-9px
+        top:-9px;
+        height: 38px;
     }
 }

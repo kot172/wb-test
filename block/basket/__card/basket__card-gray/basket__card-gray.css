@@ -5,7 +5,7 @@
 @media screen and (max-width: 1024px) {
     .basket__card-gray {
         margin-left: 15px;
-        margin-top: 3px;
+        margin-top: 1px;
         gap: 28px;
     }
 }
@@ -14,6 +14,6 @@
     .basket__card-gray {
         margin-left: 0px;
         margin-top: 9px;
-        gap: 27px;
+        gap: 30px;
     }
 }

@@ -22,8 +22,8 @@
     }
 
     .header::after{
-    height: 23px;
-    bottom: -1px;
+        height: 25px;
+        bottom: -1px;
     }
 }
 

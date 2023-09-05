@@ -4,8 +4,13 @@
 
 @media screen and (max-width: 1024px) {
     .basket__goods{
-        margin-top: 15px;
         margin-left: 16px;
-        width: 93%;
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 757px) {
+    .basket__goods{
+        width: 90%;
     }
 }

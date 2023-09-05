@@ -5,6 +5,12 @@
     height: 44px;
 }
 
+@media screen and (max-width: 1024px) {
+    .delivery__point-info{
+        gap:5px;
+    }
+}
+
 @media screen and (max-width:757px) {
     .delivery__point-info {
         height: auto;

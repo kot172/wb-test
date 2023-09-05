@@ -4,9 +4,15 @@
     margin-top: 6px;
 }
 
+@media screen and (max-width: 1024px) {
+    .delivery__caption {
+        margin-top: 12px;
+    }
+}
+
 @media screen and (max-width: 757px) {
     .delivery__caption {
-        margin-top: 1px;
+        margin-top: 0px;
         margin-left: 8px;
         max-width: 90%;
     }

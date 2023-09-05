@@ -4,6 +4,13 @@
     background-image: url(../../../images/logo_WB.svg);
 }
 
+@media screen and (max-width:1024px) {
+    .header__logo{
+        margin-top: -2px;
+        margin-left: 3px;
+    }
+}
+
 
 @media screen and (max-width: 757px) {
     .header__logo{

@@ -8,5 +8,7 @@
     .user__info {
         gap: 7px;
         max-width: 93%;
+        height: 344px;
+
     }
 }

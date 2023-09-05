@@ -4,14 +4,15 @@
     margin-bottom: 24px;
 }
 
-@media screen and (max-width: 757px) {
+@media screen and (max-width: 1024px) {
     .formalization__title{
-        max-width: 93%;
+       margin-bottom: 21px;
     }
 }
 
 @media screen and (max-width:757px) {
     .formalization__title {
         margin-left: 15px;
+        max-width: 93%;
     }
 }
