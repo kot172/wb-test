@@ -484,6 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 countCaption();
                 renderDeliveryImages();
                 priceSize();
+                totalAmount();
             }
         });
         incrementBtn.addEventListener('click', () => {
@@ -504,6 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 countCaption();
                 renderDeliveryImages();
                 priceSize();
+                totalAmount();
             }
             else {
             }
@@ -639,6 +641,29 @@ checkboxes.forEach((checkbox) => {
 });
 renderDeliveryImages();
 
+
+
+function totalAmount() {
+const basketProduct = document.getElementById('basket__product');
+const basketSum = document.getElementById('basket__sum');
+const fullSumm = document.querySelectorAll('#price__new-l');
+const fullCount = document.querySelectorAll('#card__count')
+let totalSum = 0;
+let totalCount = 0;
+
+fullSumm.forEach(item => {
+  const price = parseFloat(item.textContent.replace(/\s/g, ""));
+  totalSum += price;
+});
+
+fullCount.forEach(item => {
+    const count = parseFloat(item.textContent);
+    totalCount += count;
+  });
+basketProduct.textContent =  totalCount + ' товаров ';
+basketSum.textContent = ' ' + totalSum.toLocaleString() + ' сом';
+}
+setTimeout(totalAmount, 50);
 
 
 // Обработчик события для кнопки "Выбрать"
