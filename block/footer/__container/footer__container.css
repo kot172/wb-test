@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 757px) {
     .footer__container {
-        height: 155px;
+        height: 150px;
         align-items: center;
     }
 }

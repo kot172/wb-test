@@ -1,3 +1,10 @@
-.basket__missing-header{
+.basket__missing-header {
     padding-bottom: 18px;
+}
+
+@media screen and (max-width: 1024px) {
+    .basket__missing-header {
+        margin-left: 15px;
+        width: 97%;
     }
+}

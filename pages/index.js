@@ -15,6 +15,7 @@ const cardsData = [
     {
         cardTitle: "Футболка UZcotton мужская",
         cardParams: "Размер: 56",
+        cardParamsMissing: "56",
         cardColor: "Цвет: белый",
         cardFrom: "Коледино WB",
         cardAuthor: "OOO Вайлдберриз",
@@ -31,6 +32,7 @@ const cardsData = [
         cardTitle:
             "Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe",
         cardParams: "",
+        cardParamsMissing: "",
         cardColor: "Цвет: прозрачный",
         cardFrom: "Коледино WB",
         cardAuthor: "OOO Мегапрофстиль",
@@ -47,6 +49,7 @@ const cardsData = [
         cardTitle:
             'Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell ',
         cardParams: "",
+        cardParamsMissing: "56/54/52...",
         cardFrom: "Коледино WB",
         cardAuthor: "OOO Вайлдберриз",
         ogrn: "ОГРН: 1067746062449",
@@ -110,11 +113,13 @@ function renderCards() {
         const cardDescription = cardClone.getElementById("card__params");
         const cardImage = cardClone.querySelector(".card__avatar-missing");
         const cardColor = cardClone.getElementById("card__color");
+        const cardParamsMissing = cardClone.getElementById("card__paramsMissing")
 
         cardTitle.textContent = cardData.cardTitle;
         cardDescription.textContent = cardData.cardParams;
         cardImage.src = cardData.img;
         cardColor.textContent = cardData.cardColor;
+        cardParamsMissing.textContent = cardData.cardParamsMissing;
 
 
         cardContainer.appendChild(cardClone);
@@ -168,6 +173,11 @@ function renderBasketCard() {
 
         if (!cardData.cardColor) {
             cardHang.remove()
+            cardParamsImg.remove()
+        }
+
+        if (!cardData.cardParams) {
+            cardParamsImg.remove()
         }
     });
 }
@@ -198,7 +208,6 @@ allCheckboxes()
 
 
 const orderCaption = document.querySelector('.order__input-caption')
-console.log(orderCaption);
 
 //функция, которая меняет текст заказать на сумму
 function changeButtonText() {
@@ -492,7 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
         priceDisplay.textContent = sumPrice.toLocaleString();
         sumOld = count * originalOldPrice;
         priceOldDisplay.textContent = sumOld.toLocaleString() + ' сом';
-        priceOldDisplaySmall.textContent = sumOld.toLocaleString() + ' сом2';
+        priceOldDisplaySmall.textContent = sumOld.toLocaleString() + ' сом';
 
         const countMax = parseInt(countMaxDisplay.textContent, 10);
 
@@ -515,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 count--;
                 countDisplay.textContent = count;
                 price = (count * originalPrice);
-                priceDisplay.textContent = Math.round(price).toLocaleString() + 'ccc';
+                priceDisplay.textContent = Math.round(price).toLocaleString();
                 priceOld = (count * originalOldPrice)
                 priceOldDisplay.textContent = Math.round(priceOld).toLocaleString() + ' сом';
                 priceOldDisplaySmall.textContent = Math.round(priceOld).toLocaleString() + ' сом';
@@ -617,25 +626,22 @@ function totalSale() {
 
     let totalSaleprice = totalOldNum - totalNum;
     let totalSale = totalSaleprice.toLocaleString();
-
     saleBlock.textContent = '− ' + totalSale + ' сом'
-
 }
-
 totalSale()
 
+// Функция рендера карточке в блок доставки
 function renderDeliveryImages() {
-    const card = document.querySelectorAll('.card');
-    const delivery = document.querySelector('#imgDelivery');
-    const deliverySlow = document.querySelector('#imgDeliverySlow');
-    const containerBlock = document.getElementById('containerBlock');
+    const card = document.querySelectorAll('.card'); 
+    const delivery = document.querySelector('#imgDelivery'); // Блок доставки 5-6 февраля
+    const deliverySlow = document.querySelector('#imgDeliverySlow'); // Блок доставки 7-8 февраля
+    const containerBlock = document.getElementById('containerBlock'); 
 
-
+// Чистим содержимое
     delivery.innerHTML = '';
     deliverySlow.innerHTML = '';
 
     card.forEach((element) => {
-        const checkbox = element.querySelector('.basket__input');
         const cardCount = element.querySelector('.card__count-number')
         const isChecked = element.querySelector('input[name=basket__input]:checked')
 
@@ -659,11 +665,8 @@ function renderDeliveryImages() {
                 const countSpanSlow = newImgSlow.querySelector('.card__count-span'); // находим элемент span в клонированном изображении
                 countSpanSlow.textContent = Number(cardCount.textContent) - 184; // вычитаем 184 из значения счетчика
                 deliverySlow.appendChild(newImgSlow);
-                containerBlock.classList.remove('delivery__container-disable')
-                containerBlock.classList.add('TEST')
-            } else {
-                containerBlock.classList.remove('TEST')
-            }
+                containerBlock.classList.remove('delivery__container-disable');
+            } 
         }
     });
 }
@@ -672,6 +675,8 @@ checkboxes.forEach((checkbox) => {
     checkbox.addEventListener('change', renderDeliveryImages);
 });
 renderDeliveryImages();
+
+
 
 
 // Получаем элементы попапа
@@ -793,6 +798,4 @@ checkboxesCourier.forEach(checkbox => {
         checkbox.checked = true;
     });
 });
-
-
 

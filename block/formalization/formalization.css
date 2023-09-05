@@ -8,7 +8,8 @@
 @media screen and (max-width:1024px) {
     .formalization {
         margin: 38px 15px 10px;
-        gap: 14px;
+        gap: 18px;
+        width: 97%;
     }
 }
 

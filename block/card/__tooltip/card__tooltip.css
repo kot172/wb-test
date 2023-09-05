@@ -20,6 +20,7 @@
     z-index: 1;
     top: 0;
     left: 50%;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
     transform: translate(-49%, 18%);
     opacity: 0;
     transition: opacity 0.3s;

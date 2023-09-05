@@ -4,6 +4,12 @@
     margin-bottom: 24px;
 }
 
+@media screen and (max-width: 757px) {
+    .formalization__title{
+        max-width: 93%;
+    }
+}
+
 @media screen and (max-width:757px) {
     .formalization__title {
         margin-left: 15px;

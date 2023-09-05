@@ -1,5 +1,6 @@
-.card__quantity-missing {
-    justify-content: end;
-    width: 98%;
-    /* max-width не забыть */
+@media screen and (max-width:757px) {
+    .card__quantity-missing {
+        justify-content: end;
+        width: 98%;
+    }
 }

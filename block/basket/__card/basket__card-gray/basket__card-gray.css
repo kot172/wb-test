@@ -6,6 +6,7 @@
     .basket__card-gray {
         margin-left: 15px;
         margin-top: 3px;
+        gap: 28px;
     }
 }
 
@@ -13,6 +14,6 @@
     .basket__card-gray {
         margin-left: 0px;
         margin-top: 9px;
-        gap: 29px;
+        gap: 27px;
     }
 }

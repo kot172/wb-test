@@ -34,3 +34,7 @@
 .custom__checkbox input[type="checkbox"]:checked + .checkmark::before {
     opacity: 1;
 }
+
+.checkmark__span{
+    margin-left: 6px;
+}

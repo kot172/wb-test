@@ -8,6 +8,13 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:1024px) {
+    .formalization__header-purple{
+        margin-right: 15px;
+        margin-top: 8px;
+    }
+}
+
 @media screen and (max-width: 757px) {
     .formalization__header-purple{
         margin-top: 13px;

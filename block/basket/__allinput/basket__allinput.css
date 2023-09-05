@@ -5,7 +5,6 @@
 
 @media screen and (max-width: 757px) {
     .basket__allinput {
-        margin-top: -13px;
-        margin-left: 6px;
+        margin-top: -11px;
     }
 }

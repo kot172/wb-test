@@ -59,7 +59,7 @@
               <label class="custom__checkbox">
                 <input id="allInput" name="allInput" checked="checked" type="checkbox" class="basket__input">
                 <span class="checkmark"></span>
-                <span> Выбрать всё</span>
+                <span class="checkmark__span"> Выбрать всё</span>
               </label>
 
             </div>
@@ -495,7 +495,7 @@
           </div>
           <div id="card__hang" class="card__hang">
             <p id="card__color" class="card__params"></p>
-            <p id="card__params" class="card__params"></p>
+            <p id="card__params" class="card__params card__color"></p>
           </div>
           <div class="card__hang-gray">
             <p id="card__from" class="card__params card__params-gray"></p>
@@ -520,7 +520,7 @@
             <button id="increment__btn" type="button" class="card__button">+</button>
           </div>
           <span id="count__balance" class="card__left card__left-none">Осталось 2 шт.</span>
-          <div class="card__element">
+          <div class="card__element card__element-missing">
             <div class="card__like"></div>
             <div class="card__trash"></div>
           </div>
@@ -558,15 +558,14 @@
     <div class="card">
       <div class="card__info">
         <div class="card__avatar-container">
-          <img class="card__avatar card__avatar-missing" src="">
+          <img class="card__avatar card__avatar-missing" src="аватар">
+          <p id="card__paramsMissing" class="card__params card__params-img"></p>
         </div>
-
-
         <div class="card__text card__text-missing">
           <p id="card__title" class="card__title card__title-gray"></p>
           <div id="card__hang" class="card__hang">
-            <p id="card__color" class="card__params card__params-gray"></p>
-            <p id="card__params" class="card__params card__params-gray"></p>
+            <p id="card__color" class="card__params  card__params-gray"></p>
+            <p id="card__params" class="card__params card__color card__params-gray"></p>
           </div>
         </div>
 
@@ -575,7 +574,7 @@
         <div class="card__quantity card__quantity-missing">
 
 
-          <div class="card__element">
+          <div class="card__element card__element-missing">
             <div class="card__like"></div>
             <div class="card__trash"></div>
           </div>

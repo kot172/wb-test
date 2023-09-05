@@ -1,12 +1,12 @@
 .order__confirm {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
+
 
 @media screen and (max-width: 757px) {
     .order__confirm {
         gap: 12px;
-        margin-top: 7px;
     }
 }

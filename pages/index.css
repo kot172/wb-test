@@ -57,9 +57,11 @@
 @import url(../block/card/__count/card__count.css);
 @import url(../block/card/__count/card__count-span/card__count-span.css);
 @import url(../block/card/__count/card__count-number/card__count-number.css);
+@import url(../block/card/__color/card__color.css);
 @import url(../block/card/__like/card__like.css);
 @import url(../block/card/__trash/card__trash.css);
 @import url(../block/card/__element/card__element.css);
+@import url(../block/card/__element/card__element-missing/card__element-missing.css);
 @import url(../block/card/__text/card__text.css);
 @import url(../block/card/__text/card__text-missing/card__text-missing.css);
 @import url(../block/card/__button/card__button.css);
