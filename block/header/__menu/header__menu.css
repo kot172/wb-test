@@ -2,3 +2,11 @@
     display: flex;
     gap: 13px;
 }
+
+@media screen and (max-width:757px) {
+    .header__menu {
+        gap: 7px;
+        width: 95%;
+        justify-content: space-between;
+    }
+}
