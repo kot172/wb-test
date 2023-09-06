@@ -14,8 +14,10 @@
 
 @media screen and (max-width: 757px) {
     .header__logo{
-        background-image: url(../../../images/logo__wb-s.png);
-        width: 206px;
-        margin-left: 3px;
+        background-image: url(../../../images/logo__wb-s.svg);
+        width: 198px;
+    height: 14px;
+    margin-left: 7px;
+    margin-top: 20px;
     }
 }

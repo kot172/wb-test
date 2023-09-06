@@ -1,3 +1,9 @@
 .popup__card-order{
     height: 388px;
 }
+
+@media screen and (max-width:757px) {
+    .popup__card-order{
+        width: 300px;
+    }
+}
