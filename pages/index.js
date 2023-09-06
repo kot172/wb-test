@@ -485,6 +485,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderDeliveryImages();
                 priceSize();
                 totalAmount();
+                hideDeliverySlow();
             }
         });
         incrementBtn.addEventListener('click', () => {
@@ -506,6 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderDeliveryImages();
                 priceSize();
                 totalAmount();
+                hideDeliverySlow();
             }
             else {
             }
@@ -524,6 +526,7 @@ checkbox.forEach((item) =>
         totalSale();
         changeButtonText();
         renderDeliveryImages();
+        hideDeliverySlow();
     })
 );
 
@@ -600,7 +603,7 @@ function renderDeliveryImages() {
     const card = document.querySelectorAll('.card');
     const delivery = document.querySelector('#imgDelivery'); // Блок доставки 5-6 февраля
     const deliverySlow = document.querySelector('#imgDeliverySlow'); // Блок доставки 7-8 февраля
-    const containerBlock = document.getElementById('containerBlock');
+    const containerBlock = document.getElementById('containerBlockSlow');
 
     // Чистим содержимое
     delivery.innerHTML = '';
@@ -641,8 +644,7 @@ checkboxes.forEach((checkbox) => {
 });
 renderDeliveryImages();
 
-
-
+// функция которая генерирует надпись, когда корзина свёрнута
 function totalAmount() {
 const basketProduct = document.getElementById('basket__product');
 const basketSum = document.getElementById('basket__sum');
@@ -762,3 +764,19 @@ checkboxesCourier.forEach(checkbox => {
         checkbox.checked = true;
     });
 });
+
+function hideDeliverySlow() {
+    const containerBlock = document.querySelectorAll('.delivery__container-date');
+    containerBlock.forEach(element => {
+        const deliveryFast = element.querySelector('.delivery__container-img')
+        const picture = element.querySelector('.card__avatar')
+        if (!deliveryFast.innerHTML) {
+            deliveryFast.parentElement.style.display = 'none'
+                }
+        else {
+            deliveryFast.parentElement.style.display = 'flex'
+        }
+    });
+
+}
+hideDeliverySlow()

@@ -2,6 +2,7 @@
     height: 48px;
     width: 48px;
     background-image: url(../../../../images/burger.svg);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 757px) {
